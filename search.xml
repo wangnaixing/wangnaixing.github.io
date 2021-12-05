@@ -20,7 +20,7 @@
   </entry>
   <entry>
     <title>了解这些软件设计思想，你的思维至少上升一个段位！</title>
-    <url>//pages/p001/</url>
+    <url>/2021/12/07/%E4%BA%86%E8%A7%A3%E8%BF%99%E4%BA%9B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%8C%E4%BD%A0%E7%9A%84%E6%80%9D%E7%BB%B4%E8%87%B3%E5%B0%91%E4%B8%8A%E5%8D%87%E4%B8%80%E4%B8%AA%E6%AE%B5%E4%BD%8D%EF%BC%81/</url>
     <content><![CDATA[<h1 id="了解这些软件设计思想，你的思维至少上升一个段位！"><a href="#了解这些软件设计思想，你的思维至少上升一个段位！" class="headerlink" title="了解这些软件设计思想，你的思维至少上升一个段位！"></a>了解这些软件设计思想，你的思维至少上升一个段位！</h1><h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素） 的书，该书首次提到了软件开发中设计模式的概念，四位作者合称 GOF（全拼 Gang of Four），简称四人帮！</p>
 <blockquote>
 <p>书中共说到 23 种设计模式，这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。</p>
@@ -128,11 +128,10 @@
 ]]></content>
       <categories>
         <category>架构师</category>
-        <category>设计原则</category>
       </categories>
       <tags>
         <tag>设计模式</tag>
-        <tag>设计原则</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
 </search>
