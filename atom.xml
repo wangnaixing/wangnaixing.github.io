@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>wangnaixing</title>
   
-  <subtitle>@navy81</subtitle>
+  <subtitle>@Navy81</subtitle>
   <link href="https://wangnaixing.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangnaixing.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://wangnaixing.github.io/</id>
   
   <author>
-    <name>wangnaixing</name>
+    <name>wnx</name>
     
   </author>
   
