@@ -1,997 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Typora使用技巧——将图片自动上传到服务器上</title>
-    <url>/2021/12/05/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E2%80%94%E2%80%94%E5%B0%86%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</url>
-    <content><![CDATA[<h1 id="Typora使用技巧——将图片自动上传到服务器上"><a href="#Typora使用技巧——将图片自动上传到服务器上" class="headerlink" title="Typora使用技巧——将图片自动上传到服务器上"></a>Typora使用技巧——将图片自动上传到服务器上</h1><h1 id="何为图床？"><a href="#何为图床？" class="headerlink" title="何为图床？"></a>何为图床？</h1><blockquote>
-<p>说白了，就是类似百度网盘功能，放东西的，只不过这个东西都是图片！</p>
-</blockquote>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205225519.jpg"></p>
-<h1 id="PicGo-又是啥？"><a href="#PicGo-又是啥？" class="headerlink" title="PicGo 又是啥？"></a>PicGo 又是啥？</h1><p>PicGo是一种图床工具！就是自动把本地图片转换成链接的一款工具，网络上有很多图床工具，就目前使用种类而言，PicGo 算得上一款比较优秀的图床工具。它是一款用 <code>Electron-vue</code> 开发的软件。</p>
-<p>可以支持微博，七牛云，腾讯云COS，又拍云，GitHub，阿里云OSS，SM.MS，imgur 等8种常用图床，功能强大，简单易用</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205230208.jpg"></p>
-<h1 id="Typora建立PicGo图床"><a href="#Typora建立PicGo图床" class="headerlink" title="Typora建立PicGo图床"></a>Typora建立PicGo图床</h1><blockquote>
-<p>基于<code>Typora</code>+<code>Aliyun Oss对象存储</code>+<code>Picgo </code></p>
-</blockquote>
-<h2 id="1、阿里云图床"><a href="#1、阿里云图床" class="headerlink" title="1、阿里云图床"></a>1、阿里云图床</h2><p>首先在阿里云里搜索OSS，并开通服务。</p>
-<p><strong>创建Bucket</strong></p>
-<p>进入对象存储OSS，点击左侧栏Bucket 列表，创建Bucket 注意：读写权限选择<strong>公共读</strong>，不然PicGo无法上传图片。 </p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205220521.jpg"></p>
-<p>点击自己用户头像，创建<code>AccessKey</code>,保存相应的<code>AccessKey ID</code>和<code>Access Key Secret</code>信息。</p>
-<h2 id="2、安装PicGo"><a href="#2、安装PicGo" class="headerlink" title="2、安装PicGo"></a>2、安装PicGo</h2><blockquote>
-<p>下载网址：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p>
-</blockquote>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205221200.jpg"></p>
-<p>然后安装。<strong>将PicGo的数据加入环境变量中。</strong></p>
-<p>此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;双击Path-&gt;添加</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205222326.jpg"></p>
-<h2 id="3、图床环境配置"><a href="#3、图床环境配置" class="headerlink" title="3、图床环境配置"></a>3、图床环境配置</h2><p>打开安装好的图床,进行配置，即可！</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205224027.jpg"></p>
-<h2 id="4、Typora设置"><a href="#4、Typora设置" class="headerlink" title="4、Typora设置"></a>4、Typora设置</h2><p>设置自动上传到OSS阿里云，并且保存到我的笔记图片统一管理处（图片现在还是在本地）</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205224839-16387159733621.jpg"></p>
-<p>手动上传</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205225207.jpg"></p>
-]]></content>
-      <categories>
-        <category>Typora</category>
-      </categories>
-      <tags>
-        <tag>oss</tag>
-        <tag>picGo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Typora使用技巧——将图片自动上传到服务器上</title>
-    <url>/2021/12/06/hexo%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E4%BB%BF%E4%BF%A1%E7%BA%B8%E4%BD%9C%E4%B8%9A%E7%BA%B8%E6%A0%B7%E5%BC%8F%E4%BF%AE%E9%A5%B0/</url>
-    <content><![CDATA[<h1 id="hexo博客页面仿信纸作业纸样式修饰"><a href="#hexo博客页面仿信纸作业纸样式修饰" class="headerlink" title="hexo博客页面仿信纸作业纸样式修饰"></a>hexo博客页面仿信纸作业纸样式修饰</h1><blockquote>
-<p>“ 前言: 本文是给Hexo博客增加随笔页面，并对页面仿信纸作业纸样式修饰，基于Matery主题，其他主题亦可参考。”</p>
-</blockquote>
-<p>至于为什么要写本文，是因为有一天，突然有了一个想法，想把以前初高中写的那些作文，整理一下，上传到博客网站，无论是对于风花雪月，对于以前的一些独特的世界观，那个时期独特的idea，想要通通记录下来。于是就酝酿出来本文了。</p>
-<h3 id="实现效果展示"><a href="#实现效果展示" class="headerlink" title="实现效果展示"></a>实现效果展示</h3><p>首先，直接展示效果图：</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206093721.jpg"></p>
-<h3 id="对页面进行仿信纸样式修饰"><a href="#对页面进行仿信纸样式修饰" class="headerlink" title="对页面进行仿信纸样式修饰"></a>对页面进行仿信纸样式修饰</h3><p>此部分均为css代码，直接贴在<code>post-detail.ejs</code>文件里即可。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">&lt;style>
-    .ititle</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">margin</span><span class="token punctuation">:</span> 15px 0<span class="token punctuation">;</span>
-        <span class="token property">text-align</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span>
-        <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Architects Daughter'</span><span class="token punctuation">,</span> cursive<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.ipage</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">line-height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
-        <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
-        <span class="token property">padding</span><span class="token punctuation">:</span> 15px 32px 29px<span class="token punctuation">;</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> #f9f9f9<span class="token punctuation">;</span>
-        <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0px 2px 5px 0px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.26<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">-moz-border-radius-bottomleft</span><span class="token punctuation">:</span> 20px 500px<span class="token punctuation">;</span>
-        <span class="token property">-moz-border-radius-bottomright</span><span class="token punctuation">:</span> 500px 30px<span class="token punctuation">;</span>
-        <span class="token property">-moz-border-radius-topright</span><span class="token punctuation">:</span> 5px 100px<span class="token punctuation">;</span> 
-        <span class="token property">-webkit-border-bottom-left-radius</span><span class="token punctuation">:</span> 20px 500px<span class="token punctuation">;</span>
-        <span class="token property">-webkit-border-bottom-right-radius</span><span class="token punctuation">:</span> 64px 10px<span class="token punctuation">;</span>
-        <span class="token property">-webkit-border-top-right-radius</span><span class="token punctuation">:</span> 5px 100px<span class="token punctuation">;</span>    
-        <span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 20px 500px<span class="token punctuation">;</span>
-        <span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 64px 10px<span class="token punctuation">;</span>
-        <span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 5px 100px<span class="token punctuation">;</span>           
-        <span class="token property">-webkit-background-size</span><span class="token punctuation">:</span> 100% 30px<span class="token punctuation">;</span>
-        <span class="token property">-moz-box-shadow</span><span class="token punctuation">:</span> 0 2px 10px 1px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> 0 2px 10px 1px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">text-shadow</span><span class="token punctuation">:</span> 0 1px 0 #F6EF97<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token selector">.izhengwen</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">z-index</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">repeating-linear-gradient</span><span class="token punctuation">(</span>to bottom<span class="token punctuation">,</span> #f9f9f9<span class="token punctuation">,</span> #f9f9f9 31px<span class="token punctuation">,</span> #6BA2D8 1px<span class="token punctuation">,</span> #f9f9f9<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">background-size</span><span class="token punctuation">:</span> 100% 32px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">#articleContent p</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> 0
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.ititle</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Architects Daughter'</span><span class="token punctuation">,</span> cursive<span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.45rem<span class="token important">!important</span><span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> 10px auto<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.izhengwen p</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-    <span class="token property">line-height</span><span class="token punctuation">:</span> 2.2rem<span class="token important">!important</span><span class="token punctuation">;</span>
-    <span class="token property">text-indent</span><span class="token punctuation">:</span> 2em<span class="token punctuation">;</span>
-    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Architects Daughter'</span><span class="token punctuation">,</span> cursive<span class="token important">!important</span><span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.45rem<span class="token important">!important</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.ipage::before</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
-    <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> 52px<span class="token punctuation">;</span>
-    <span class="token property">z-index</span><span class="token punctuation">:</span> 4<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-    <span class="token property">border-left</span><span class="token punctuation">:</span> 1px solid #fca1a1<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.izhengwen p:nth-child(odd):before</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> -16px<span class="token punctuation">;</span>
-    <span class="token property">z-index</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
-    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-    <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0px 2px 5px 0px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.26<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.ipage:after</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> 52px<span class="token punctuation">;</span>
-    <span class="token property">z-index</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-    <span class="token property">border-left</span><span class="token punctuation">:</span> 4px double #fca1a1<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.ipage p</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> 0 2em<span class="token punctuation">;</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> #333<span class="token important">!important</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">body.dark .ipage</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">opacity</span><span class="token punctuation">:</span> 0.85<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token comment">/*小屏幕下(手机类)的样式*/</span>
-<span class="token atrule"><span class="token rule">@media</span> <span class="token keyword">only</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">)</span></span> <span class="token punctuation">&#123;</span>
-    <span class="token selector">.ipage</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">padding</span><span class="token punctuation">:</span> 15px 23px 29px<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.ipage:after</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">left</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.ipage::before</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">right</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>    
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.ipage p</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">padding</span><span class="token punctuation">:</span> 0 0.9em<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-&lt;/style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="新建一个md文件作为随笔文章页"><a href="#新建一个md文件作为随笔文章页" class="headerlink" title="新建一个md文件作为随笔文章页"></a>新建一个md文件作为随笔文章页</h3><p>这里我直接给出一个模板随笔文章页，可直接粘贴，其中以下div格式是固定的，不可修改，但可以随意自定义内容文字。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ipage<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ititle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>izhengwen<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>正文<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>正文<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>以下是我自拟的一个随笔模板页md文件源码，你可以直接粘贴做修改</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">--</span><span class="token operator">-</span>
-title<span class="token operator">:</span> 啊啊啊这是随笔文章模板
-abbrlink<span class="token operator">:</span> <span class="token string">'essay-demo'</span>
-tags<span class="token operator">:</span>
-  <span class="token operator">-</span> 随笔
-categories<span class="token operator">:</span> 随笔
-mathjax<span class="token operator">:</span> <span class="token boolean">true</span>
-<span class="token operator">--</span><span class="token operator">-</span>
-### 这是博主的随笔板块，后续会更新文章，目前弄好了模板格式<span class="token operator">~</span>
-<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ipage"</span><span class="token operator">></span>
- <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ititle"</span><span class="token operator">></span>节选自《你若安好便是晴天》<span class="token operator">-</span> 前言<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"izhengwen"</span><span class="token operator">></span>
-    <span class="token generics"><span class="token punctuation">&lt;</span>p<span class="token punctuation">></span></span>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。
-    <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>最后，运行<code>hexo s</code>查看效果，进行调试。 </p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随笔模板</title>
-    <url>/2021/12/06/essay-demo/</url>
-    <content><![CDATA[<h3 id="这是博主的随笔模板"><a href="#这是博主的随笔模板" class="headerlink" title="这是博主的随笔模板!"></a>这是博主的随笔模板!</h3><div class="ipage">
- <div class="ititle">节选自《你若安好便是晴天》- 前言</div>
-  <div class="izhengwen">
-    <p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。</p>
-  </div>
-</div>]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>了解这些软件设计思想，你的思维至少上升一个段位！</title>
-    <url>/2021/12/07/%E4%BA%86%E8%A7%A3%E8%BF%99%E4%BA%9B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%8C%E4%BD%A0%E7%9A%84%E6%80%9D%E7%BB%B4%E8%87%B3%E5%B0%91%E4%B8%8A%E5%8D%87%E4%B8%80%E4%B8%AA%E6%AE%B5%E4%BD%8D%EF%BC%81/</url>
-    <content><![CDATA[<h1 id="了解这些软件设计思想，你的思维至少上升一个段位！"><a href="#了解这些软件设计思想，你的思维至少上升一个段位！" class="headerlink" title="了解这些软件设计思想，你的思维至少上升一个段位！"></a>了解这些软件设计思想，你的思维至少上升一个段位！</h1><h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素） 的书，该书首次提到了软件开发中设计模式的概念，四位作者合称 GOF（全拼 Gang of Four），简称四人帮！</p>
-<blockquote>
-<p>书中共说到 23 种设计模式，这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。</p>
-</blockquote>
-<p>当然，随着软件的快速发展，还出现另一类我们所熟知的设计模式：<strong>J2EE 设计模式</strong>。</p>
-<p>首先要跟大家说明的是，<strong>设计模式其实不是一项新技术</strong>，而是众多软件开发人员经过相当长的一段时间的试用和试错总结出来的一套软件设计开发实践方案，学习这些知识有助于经验不足的开发人员通过一种简单快捷的方式来学习软件设计。</p>
-<p>也不BB了，下面我们就一起来深入了解一下大神们总结的这套方法论！</p>
-<h3 id="二、方法论"><a href="#二、方法论" class="headerlink" title="二、方法论"></a>二、方法论</h3><h4 id="2-1、单一职责原则"><a href="#2-1、单一职责原则" class="headerlink" title="2.1、单一职责原则"></a>2.1、单一职责原则</h4><p>单一职责原则，顾名思义，一个类负责一个功能的处理，比如我们在代码中经常会涉及到调用第三方的接口，通常我们往往会将一个接口请求方法封装成一个<code>http</code>请求的工具类，这样其他的调用方能非常方便的进行调用。</p>
-<p>单一职责原则，主要的目的是将一个功能划分到合适的粒度，让这些各自执行单一职责的类，各司其职。</p>
-<p>还有我们常常说的mvc模式，将数据操作与业务逻辑处理进行分离，也是属于单一职责原则的一种。</p>
-<h4 id="2-2、开闭原则"><a href="#2-2、开闭原则" class="headerlink" title="2.2、开闭原则"></a>2.2、开闭原则</h4><p>开闭原则，指的是：<strong>对扩展开放，对修改关闭</strong>。这里的意思是在增加新功能的时候，<strong>能不改代码就尽量不要改，如果只增加代码就完成了新功能，那是最好的</strong>。</p>
-<p>下面我举个简单的例子，大家可能就懂了。</p>
-<p>在实际的项目开发过程中，尤其是与第三方公司进行接口对接的时候，例如 a 公司，他的接口协议要求采用<code>rsa</code>加密；b 公司，他的接口协议采用<code>aes</code>加密，c公司，他的接口协议要求采用<code>md5</code>就可以了…</p>
-<p>在一开始的时候，可能你没有想那么多，设想所有其他公司跟你对接的时候，全部采用<code>rsa</code>加密，那么当第二家公司来了时候，要求采用<code>aes</code>，这个时候，你必须得改代码才能支持这种功能，假如又来了其他公司呢？</p>
-<p>在这种情况下，我们可以采用面向接口编程的思想，定义一个抽象的方法，然后针对不同的加密算法，编写不同的实现类，当新来了一家公司要求采用不同的加密算法时，我们只需要扩展一个新的实现类，在逻辑处理层进行路由即可快速完成开发和对接！</p>
-<p>实现开闭原则的主要步骤就是将业务方法里面的逻辑进行抽象化，从而实现逻辑层面代码的解耦。</p>
-<h4 id="2-3、里氏代换原则"><a href="#2-3、里氏代换原则" class="headerlink" title="2.3、里氏代换原则"></a>2.3、里氏代换原则</h4><p>里氏替换原则，通俗的说就是：子类可以扩展父类的功能，但不能改变父类原有的功能。</p>
-<p>也就是说：<strong>子类继承父类时，除添加新的方法完成新增功能外，尽量不要重写父类的方法</strong>。</p>
-<p>当子类在重写父类的方法时，如果使用不当，很可能会改变父类方法中的逻辑语义，进而造成逻辑处理混乱。</p>
-<p>在实际的业务开发中，尤其是大家在使用类继承操作时，应当谨慎重新父类方法，方法定义的时候，名称也尽量不要发生重名。</p>
-<p>同时，应该注意类过多的继承，例如 A 类继承自 B 类，B 类 继承自 C 类，C 类继承 D 类，这种场景下，第一：逻辑很可能非常复杂，代码可读性可能很差，第二种可能会出现方法名或者属性名冲突。</p>
-<p>我曾经修改一个老项目 bug 的时候，就出现过这种情况，一个实体类出现三层关系的继承，当我把子类进行序列化成<code>json</code>的时候，突然报错，原因就是因为里面有个属性，在基类里面也定义了，但是类型却不一样，也就是说在这个子类里面有两个相同的属性，只是字段类型不同而已，从而导致这个序列化报错。</p>
-<p>因此，大家在使用类继承操作时，一定要谨慎处理，最好的情况下是一层关系继承，这样即使出现问题了，也好排查，范围可控；继承关系多了，反而代码变的非常复杂，每个方法逻辑都需要一一梳理清楚，你才敢去下手，这种情况下，反而为难了自己！</p>
-<h4 id="2-4、依赖倒转原则"><a href="#2-4、依赖倒转原则" class="headerlink" title="2.4、依赖倒转原则"></a>2.4、依赖倒转原则</h4><p>依赖倒转原则，简单的说就是<strong>面向接口编程，依赖于抽象而不依赖于具体</strong>，他是实现<strong>开闭原则</strong>的一个途径。</p>
-<p>依赖倒转原则主要有以下几点：</p>
-<ul>
-<li>高层的模块不应该依赖于低层的模块，这两者都应该依赖于其抽象</li>
-<li>抽象不应该依赖细节</li>
-<li>细节应该依赖抽象</li>
-</ul>
-<p>换句话说，就是将具体类里面的方法进行逻辑抽象化，提升到接口或者抽象类里面，由具体的实现类去实现具体的业务逻辑，抽象层不关注细节。</p>
-<p>也就是我们俗称的，不管遇到啥事情，先看大局，在看小点。</p>
-<p>举个例子，例如我们常常使用的<code>MVC</code>框架，在<code>Service</code>层通常会<strong>先编写接口类，然后在编写服务实现类，这就是典型的面向接口编程</strong>，这种方案有哪些好处呢？</p>
-<ul>
-<li>可以减少研发人员并行开发引起的风险</li>
-<li>可以显著提高代码的可读性和可维护性</li>
-<li>可以降低类间的耦合性</li>
-</ul>
-<p>当一个大项目开发的时候，试想一下，如果2个以上研发人员在编写同一个类的同一个方法，没有定义接口的情况下，随着时间的流逝，这个类大概率会非常混乱，同时，里面的方法估计阅读起来也很困难，一眼望去基本上不知道这个方法是干嘛的，尤其是重载方法很多的时候，尤其困难。</p>
-<p>当我们引入接口之后，将所有的核心方法全部抽象定义，当我们对其进行二次开发的时，也会能快速定位到以前的和谐方法，然后进行快速定位和维护。</p>
-<p>面向接口编程，还有一个很大的好处，就是可以降低类之间的耦合度。</p>
-<h4 id="2-5、接口隔离原则"><a href="#2-5、接口隔离原则" class="headerlink" title="2.5、接口隔离原则"></a>2.5、接口隔离原则</h4><p>接口隔离原则的意思是：<strong>尽量将一个接口拆的更细，使用多个隔离的接口，比使用单个接口要好</strong>。</p>
-<p>这个原则基本上是从大型软件架构出发、便于升级和维护的思想诞生出来的。</p>
-<p>比如，一个第三方保险服务系统里面，如果是小项目，你可以在一个接口里面定义<code>投保方法</code>、<code>取消方法</code>、 <code>退保方法</code>、 <code>理赔方法</code>、 <code>保单方法</code>这5种方法。</p>
-<p>当你只跟一家保险公司合作的时候，这套接口定义是没问题的，但是假如现在公司的业务发展的非常快，已经引入10几家保险公司了，你会发现这个接口基本上顶不住了，在此有两种方法可以解决这种技术难题：</p>
-<ul>
-<li>1、针对不同的保险公司，又重新定义一个接口，然后还是里面的5种方法</li>
-<li>2、针对不同的操作行为，比如<code>投保</code>，单独定义一套接口，然后针对不同的保险公司编写不同的实现类</li>
-</ul>
-<p>这两种其实本质都是将一个接口，拆成多个颗粒度更细的接口，然后从行为上，让各种的实现类更加独立，进而降低类之间的耦合度，开发起来层次清晰，有利于系统的稳定！</p>
-<h4 id="2-6、组合-聚合复用原则"><a href="#2-6、组合-聚合复用原则" class="headerlink" title="2.6、组合/聚合复用原则"></a>2.6、组合/聚合复用原则</h4><p>合成复用原则的意思就是：<strong>尽量使用组合/聚合的方式，而不是使用继承</strong>。</p>
-<p>所谓<strong>组合/聚合的方式</strong>，其实就是我们在<code>springMVC</code>里面使用的<code>ioc</code>依赖注入方式，</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">
-<span class="token annotation punctuation">@Component</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AService</span> <span class="token punctuation">&#123;</span>
-
- <span class="token comment">/**
-     * ioc依赖注入
-     */</span>
-    <span class="token annotation punctuation">@Autowired</span>
-    <span class="token keyword">private</span> <span class="token class-name">BService</span> bService<span class="token punctuation">;</span>
-
- <span class="token comment">//业务代码...</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><code>AService</code>类调用<code>BService</code>类，有两种方式可以实现，第一种就是通过继承方式，可以直接调用；第二种方式就是通过<code>ioc</code>依赖注入的方式，在类里面进行组合操作，然后进行调用。</p>
-<p><strong>很明显，第二种方式，我们使用的爱不释手</strong>！</p>
-<p>这种方式有个好处就是，代码层次清晰，编写优雅，用上之后容易上瘾，推荐使用！</p>
-<h4 id="2-7、迪米特法则"><a href="#2-7、迪米特法则" class="headerlink" title="2.7、迪米特法则"></a>2.7、迪米特法则</h4><p>迪米特法则，又称最少知道原则，意思就是说：<strong>一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立</strong>。</p>
-<p>类似单一原则的思想，例如我们编写实体类的时候，基本上就是属性名称，加<code>get/set</code>。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">&#123;</span>
-
- <span class="token comment">/**
-     * 用户id
-     */</span>
-    <span class="token keyword">private</span> <span class="token class-name">Long</span> userId<span class="token punctuation">;</span>
-
- <span class="token comment">/**
-     * 用户姓名
-     */</span>
- <span class="token keyword">private</span> <span class="token class-name">String</span> userName<span class="token punctuation">;</span>
-
-
- <span class="token keyword">public</span> <span class="token class-name">Long</span> <span class="token function">getUserId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userId<span class="token punctuation">;</span>
- <span class="token punctuation">&#125;</span>
-
- <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserId</span><span class="token punctuation">(</span><span class="token class-name">Long</span> userId<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token keyword">this</span><span class="token punctuation">.</span>userId <span class="token operator">=</span> userId<span class="token punctuation">;</span>
- <span class="token punctuation">&#125;</span>
-
- <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getUserName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userName<span class="token punctuation">;</span>
- <span class="token punctuation">&#125;</span>
-
- <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserName</span><span class="token punctuation">(</span><span class="token class-name">String</span> userName<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token keyword">this</span><span class="token punctuation">.</span>userName <span class="token operator">=</span> userName<span class="token punctuation">;</span>
- <span class="token punctuation">&#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>当一个实体里面出现跟自己没太大关系的代码时，例如数据运算逻辑处理，这个时候应当将这部分代码全部清理出去，交由业务处理层来出来。</p>
-<p>从实体类的定义来说，它主要的功能就是承担数据展示，当多个业务处理层在使用这个实体类的时候，如果你们嵌套了很多的数据运算逻辑，可能在返回的时候，客户端得到的实体类的属性值，并不是正确的结果！</p>
-<h3 id="三、小结"><a href="#三、小结" class="headerlink" title="三、小结"></a>三、小结</h3><p>上面一共介绍了 7 种设计原则，基本上都是大神们经过很多次血的教训，总结出来的一套方法论。</p>
-<p>这些设计原则，可以给同行在实际的软件设计过程中，提供一些思路，具体的应用，还需要结合实际的业务场景进一步思考，怎么让系统变的更加可靠，开发更佳迅速，代码阅读起来更佳轻松，关键在于灵活运用！</p>
-]]></content>
-      <categories>
-        <category>架构师</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于给Hexo文章分类页面按钮仿书本样式美化</title>
-    <url>/2021/12/07/%E5%85%B3%E4%BA%8E%E7%BB%99hexo%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E6%8C%89%E9%92%AE%E4%BB%BF%E4%B9%A6%E6%9C%AC%E6%A0%B7%E5%BC%8F%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<h1 id="关于给Hexo文章分类页面按钮仿书本样式美化"><a href="#关于给Hexo文章分类页面按钮仿书本样式美化" class="headerlink" title="关于给Hexo文章分类页面按钮仿书本样式美化"></a>关于给Hexo文章分类页面按钮仿书本样式美化</h1><blockquote>
-<p>前言：最近成迷于美化Hexo博客样式，发现了这个超好看的样式，美化了一下，基于Matery主题设置的，其他主题原理也一样可参考。</p>
-</blockquote>
-<p>废话不多说，先上图：</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206083338.jpg"></p>
-<p>特点: 都是<code>div+css</code>美化效果，所以没啥难度，可以直接复制我以下的代码，或者做修改都可。</p>
-<h3 id="引入html代码"><a href="#引入html代码" class="headerlink" title="引入html代码"></a>引入<code>html</code>代码</h3><ul>
-<li>1、首先，找到位置为<code>/layout/category-cloud.ejs</code>的文件，后面的html和css代码都放在此<code>category-cloud.ejs</code>文件即可。</li>
-<li>2、然后，定位到<code>href=&quot;&lt;%- url_for(category.path) %&gt;&quot;</code>的a标签位置：</li>
-</ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 定位到该位置 <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%- url_for(category.path) %>"</span> title<span class="token operator">=</span><span class="token string">"&lt;%- category.name %>: &lt;%- category.length %>"</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<ul>
-<li>3、直接将该a标签里面的内容全部替换为以下代码：</li>
-</ul>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>moleskine-wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>moleskine-notebook<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chip notebook-cover center-align waves-effect waves-light
-                &lt;% if (isCategory &amp;&amp; category.name == page.category) &#123; %> chip-active &lt;% &#125; else &#123; %> chip-default &lt;% &#125; %><span class="token punctuation">"</span></span>
-                        <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> &lt;%- color %><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>                                               
-                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>notebook-skin
-                        &lt;% if (isCategory &amp;&amp; category.name == page.category) &#123; %> chip-active &lt;% &#125; else &#123; %> chip-default &lt;% &#125; %><span class="token punctuation">"</span></span>
-                        <span class="token punctuation">></span></span>&lt;%- category.name %>                     
-                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>notebook-page dotted<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="设置css样式"><a href="#设置css样式" class="headerlink" title="设置css样式"></a>设置css样式</h3><p>这部分同样放在此<code>category-cloud.ejs</code>文件即可。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">&lt;style>
-    <span class="token comment">/* 文章分类书本样式 */</span>
-    <span class="token selector">.chip-container .tag-chips</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-        <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
-        <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip-container .tag-chips a</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">margin</span><span class="token punctuation">:</span> 0 7px 10px<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip-container .chip</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% / 4<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">min-width</span><span class="token punctuation">:</span> 10em<span class="token punctuation">;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-        <span class="token property">transition</span><span class="token punctuation">:</span> .5s linear<span class="token punctuation">;</span>
-        <span class="token property">padding</span><span class="token punctuation">:</span> 19px 0<span class="token punctuation">;</span>
-        <span class="token property">line-height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 990<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 15px 15px 5px<span class="token punctuation">;</span>
-        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left center 0<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip-container .notebook-cover::before</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% + 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">top</span><span class="token punctuation">:</span> -1px<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
-        <span class="token property">right</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
-        <span class="token property">transition</span><span class="token punctuation">:</span> 2s ease<span class="token punctuation">;</span>
-        <span class="token comment">/* background: linear-gradient(to right,#9c2e2b 0,#cc4b48 12%,#9c2e2b 25%,#cc4b48 37%,#9c2e2b 50%,#cc4b48 62%,#9c2e2b 75%,#cc4b48 87%,#9c2e2b 100%); */</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span>#1e606e 0<span class="token punctuation">,</span>#2e95aa 12%<span class="token punctuation">,</span>#1e606e 25%<span class="token punctuation">,</span>#2e95aa 37%<span class="token punctuation">,</span>#1e606e 50%<span class="token punctuation">,</span>#2e95aa 62%<span class="token punctuation">,</span>#1e606e 75%<span class="token punctuation">,</span>#2e95aa 87%<span class="token punctuation">,</span>#1e606e 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip .notebook-skin</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> #e8e8e0<span class="token punctuation">;</span>
-        <span class="token property">margin-top</span><span class="token punctuation">:</span> 42px<span class="token punctuation">;</span>
-        <span class="token property">padding</span><span class="token punctuation">:</span> 10px 32px 64px 10px<span class="token punctuation">;</span>
-        <span class="token property">font-size</span><span class="token punctuation">:</span> 19px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span>
-        <span class="token property">color</span><span class="token punctuation">:</span> #222<span class="token punctuation">;</span>
-        <span class="token property">text-align</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
-        <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 1px 1px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip .notebook-skin:before</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
-        <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-        <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> #cddc39<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.notebook-cover</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> #cc4b48<span class="token punctuation">;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 15px 15px 5px<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span>
-        <span class="token property">transition</span><span class="token punctuation">:</span> .5s linear<span class="token punctuation">;</span>
-        <span class="token property">transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
-        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left center 0<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token selector">.moleskine-wrapper</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% / 4<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">min-width</span><span class="token punctuation">:</span> 10em<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.moleskine-notebook:hover .notebook-cover</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>-50deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 99<span class="token punctuation">;</span>
-        <span class="token property">box-shadow</span><span class="token punctuation">:</span> 20px 10px 50px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.moleskine-notebook</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-        <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
-        <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>
-        <span class="token property">transition</span><span class="token punctuation">:</span> .5s linear<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 15px 15px 5px<span class="token punctuation">;</span>
-        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left center 0<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.moleskine-notebook:hover</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>-10deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.notebook-page.dotted</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom<span class="token punctuation">,</span>#fbfae8 9px<span class="token punctuation">,</span>#e4e4e4 1px<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">background-size</span><span class="token punctuation">:</span> 100% 10px<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip-container .chip:hover</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.notebook-page</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-        <span class="token property">top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> #fbfae8<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 16px 16px 5px<span class="token punctuation">;</span>
-        <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-&lt;/style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>至此，结束。很简单，但超好看。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>matery</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2021/12/06/MongoDB%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%EF%BC%8C%E6%8E%8C%E6%8F%A1%E8%BF%99%E4%BA%9B%E5%88%9A%E5%88%9A%E5%A5%BD%EF%BC%81/</url>
-    <content><![CDATA[<hr>
-<p>title: MongoDB快速入门，掌握这些刚刚好！<br>date: 2021-12-06 17:10:00<br>author: 王乃醒<br>top: true<br>hide: false<br>cover: true<br>coverImg: <a href="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/wallhaven-dpve7o.jpg">https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/wallhaven-dpve7o.jpg</a><br>toc: true<br>mathjax: false<br>summary: 我们都是受困于时代的囚鸟，既渴望逃离，又踌躇不前！<br>categories: MongoDB<br>tags:</p>
-<ul>
-<li>NoSql</li>
-<li>非关系型数据库</li>
-<li>MongoDB命令行操作</li>
-<li>Robomongo</li>
-</ul>
-<h1 id="MongoDB快速入门，掌握这些刚刚好！"><a href="#MongoDB快速入门，掌握这些刚刚好！" class="headerlink" title="MongoDB快速入门，掌握这些刚刚好！"></a>MongoDB快速入门，掌握这些刚刚好！</h1><blockquote>
-<p>虽说现在关系型数据库还是主流，但是面对某些需求的时候，需要非关系型数据库来补充它，学习一个主流的NoSQL数据库还是很有必要的。MongoDB是一个功能丰富的NoSQL数据库，本文整理了它最常用的部分形成了这篇入门教程，希望对大家有所帮助。</p>
-</blockquote>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写，旨在为WEB应用提供可扩展的高性能数据存储解决方案。MongoDB是一个介于关系型数据库和非关系型数据库之间的产品，是非关系型数据库当中功能最丰富，最像关系型数据库的。`</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
-<p>以前写的MongoDB安装教程是基于3.2版本的，发现有的朋友使用新版本安装有问题，这次我们使用最新版本再来安装一次，本文所使用的MongoDB版本为4.2.5，总的来说，新版本的安装更简单了。</p>
-</blockquote>
-<h3 id="Windows下的安装"><a href="#Windows下的安装" class="headerlink" title="Windows下的安装"></a>Windows下的安装</h3><ul>
-<li>下载MongoDB安装包，选择<code>Windows x64</code>版本安装，下载地址：<a href="https://www.mongodb.com/download-center/community">https://www.mongodb.com/download-center/community</a></li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206142854.jpg"></p>
-<ul>
-<li>运行MongoDB安装包并选择自定义安装，设置好安装路径；本次我选择默认路径。</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206143519.jpg"></p>
-<ul>
-<li>配置MongoDB，让MongoDB作为服务运行，并配置好数据目录和日志目录；</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206143948.jpg"></p>
-<ul>
-<li>取消MongoDB Compass的安装选项（不取消安装极慢），需要可自行安装；</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206144004.jpg"></p>
-<ul>
-<li>双击<code>mongo.exe</code>可以运行MongoDB自带客户端，操作MongoDB；</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206144226.jpg"></p>
-<ul>
-<li>连接成功后会显示如下信息；</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206144307.jpg"></p>
-<ul>
-<li>如果需要移除MongoDB服务，只需使用管理员权限运行<code>cmd</code>工具，并输入如下命令。</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sc.exe delete MongoDB<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206144431.jpg"></p>
-<h3 id="Linux下的安装"><a href="#Linux下的安装" class="headerlink" title="Linux下的安装"></a>Linux下的安装</h3><p>准备一个新的虚机机，执行如下命令安装Docker，启动服务测试服务是否可用</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ yum remove docker \
-                  docker-client \
-                  docker-client-latest \
-                  docker-common \
-                  docker-latest \
-                  docker-latest-logrotate \
-                  docker-logrotate \
-                  docker-engine<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ yum install -y yum-utils
-$ yum-config-manager --add-repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;docker-ce&#x2F;linux&#x2F;centos&#x2F;docker-ce.repo
-$ yum makecache fast
-$ yum install docker-ce docker-ce-cli containerd.io    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ systemctl start docker
-$ docker run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<ul>
-<li>下载MongoDB的Docker镜像；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ docker pull mongo:4.2.5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>使用Docker命令启动MongoDB服务；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ docker run -p 27017:27017 --name mongo -v &#x2F;mydata&#x2F;mongo&#x2F;db:&#x2F;data&#x2F;db -d mongo:4.2.5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>有时候我们需要为MongoDB设置账号，可以使用如下命令启动；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ docker run -p 27017:27017 --name mongo -v &#x2F;mydata&#x2F;mongo&#x2F;db:&#x2F;data&#x2F;db -d mongo:4.2.5 --auth<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>然后我们需要进入容器中的MongoDB客户端；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ docker exec -it mongo mongo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>之后在<code>admin</code>集合中创建一个账号用于连接，这里创建的是基于<code>root</code>角色的超级管理员帐号；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">use admin
-db.createUser(&#123;
-    user: &#39;mongoadmin&#39;,
-    pwd: &#39;wangnaixing&#39;,
-    roles: [ &#123; role: &quot;root&quot;, db: &quot;admin&quot; &#125; ] &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>创建完成后验证是否可以登录；</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.auth(&quot;mongoadmin&quot;,&quot;wangnaixing&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>整个账号创建过程可以参考下图。</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206165523.jpg"></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ firewall-cmd --zone&#x3D;public --add-port&#x3D;27017&#x2F;tcp --permanent
-$ systemctl restart firewalld.service #放行端口27017<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<ul>
-<li>使用Navicat Premium来测试</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206170315-16387816815135.jpg"></p>
-<h3 id="客户端工具"><a href="#客户端工具" class="headerlink" title="客户端工具"></a>客户端工具</h3><blockquote>
-<p>MongoDB的客户端工具有很多，上面没安装的MongoDB Compass就是其中之一，另外Navicat 15版本也有MongoDB的管理功能。这里我们使用的是一款免费的客户端工具Robo 3T（以前叫Robomongo）。</p>
-</blockquote>
-<ul>
-<li>先下载客户端工具，下载地址：<a href="https://robomongo.org/download">https://robomongo.org/download</a></li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206150700.jpg"></p>
-<ul>
-<li>下载完成后解压，双击<code>robo3t.exe</code>即可使用；</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206151358.jpg"></p>
-<ul>
-<li><p>之后创建一个到MongoDB的连接；</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206151254-16387748156253.jpg"></p>
-</li>
-<li><p>创建连接成功以后，就可以操作MongoDB了。</p>
-</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206151505.jpg"></p>
-<h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><blockquote>
-<p>MongoDB是非关系型数据库当中最像关系型数据库的，所以我们通过它与关系型数据库的对比，来了解下它的概念。</p>
-</blockquote>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206151929.jpg"></p>
-<h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><ul>
-<li>创建数据库，使用<code>use</code>命令去创建数据库，当插入第一条数据时会创建数据库，例如创建一个<code>test</code>数据库；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&gt; use test
-switched to db test
-&gt; db.article.insert(&#123;name:&quot;MongoDB教程&quot;&#125;)
-WriteResult(&#123; &quot;nInserted&quot; : 1 &#125;)
-&gt; show dbs
-admin   0.000GB
-config  0.000GB
-local   0.000GB
-test    0.000GB
-&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>删除数据库，使用db对象中的<code>dropDatabase()</code>方法来删除；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&gt; db.dropDatabase()
-&#123; &quot;dropped&quot; : &quot;test&quot;, &quot;ok&quot; : 1 &#125;
-&gt; show dbs
-admin   0.000GB
-config  0.000GB
-local   0.000GB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="集合操作"><a href="#集合操作" class="headerlink" title="集合操作"></a>集合操作</h2><ul>
-<li>创建集合，使用db对象中的<code>createCollection()</code>方法来创建集合，例如创建一个<code>article</code>集合；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&gt; use test
-switched to db test
-&gt; db.createCollection(&quot;article&quot;)
-&#123; &quot;ok&quot; : 1 &#125;
-&gt; show collections
-article<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>删除集合，使用collection对象的<code>drop()</code>方法来删除集合，例如删除一个<code>article</code>集合；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&gt; db.article.drop()
-true
-&gt; show collections<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="文档操作"><a href="#文档操作" class="headerlink" title="文档操作"></a>文档操作</h2><blockquote>
-<p>上面的数据库和集合操作是在MongoDB的客户端中进行的，下面的文档操作都是在Robomongo中进行的。</p>
-</blockquote>
-<h3 id="插入文档"><a href="#插入文档" class="headerlink" title="插入文档"></a>插入文档</h3><ul>
-<li>MongoDB通过collection对象的<code>insert()</code>方法向集合中插入文档，语法如下:</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.collection.insert(document)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>使用collection对象的<code>insert()</code>方法来插入文档，例如插入一个<code>article</code>文档；</li>
-</ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">db<span class="token punctuation">.</span>article<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>title<span class="token operator">:</span> <span class="token string">'MongoDB 教程'</span><span class="token punctuation">,</span>
-    description<span class="token operator">:</span> <span class="token string">'MongoDB 是一个 Nosql 数据库'</span><span class="token punctuation">,</span>
-    by<span class="token operator">:</span> <span class="token string">'wangnaixing'</span><span class="token punctuation">,</span>
-    url<span class="token operator">:</span> <span class="token string">'https://www.mongodb.com/'</span><span class="token punctuation">,</span>
-    tags<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'mongodb'</span><span class="token punctuation">,</span> <span class="token string">'database'</span><span class="token punctuation">,</span> <span class="token string">'NoSQL'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    likes<span class="token operator">:</span> <span class="token number">100</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206153804.jpg"></p>
-<ul>
-<li>系统控制台显示插入一条记录成功！我们查看该文档记录</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206153904.jpg"></p>
-<ul>
-<li>使用collection对象的<code>find()</code>方法可以获取文档，例如获取所有的<code>article</code>文档；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
-    <span class="token property">"_id"</span> <span class="token operator">:</span> ObjectId(<span class="token string">"61adbdc22e9085f6bd109dc7"</span>)<span class="token punctuation">,</span>
-    <span class="token property">"title"</span> <span class="token operator">:</span> <span class="token string">"MongoDB 教程"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span> <span class="token operator">:</span> <span class="token string">"MongoDB 是一个 Nosql 数据库"</span><span class="token punctuation">,</span>
-    <span class="token property">"by"</span> <span class="token operator">:</span> <span class="token string">"wangnaixing"</span><span class="token punctuation">,</span>
-    <span class="token property">"url"</span> <span class="token operator">:</span> <span class="token string">"https://www.mongodb.com/"</span><span class="token punctuation">,</span>
-    <span class="token property">"tags"</span> <span class="token operator">:</span> <span class="token punctuation">[</span> 
-        <span class="token string">"mongodb"</span><span class="token punctuation">,</span> 
-        <span class="token string">"database"</span><span class="token punctuation">,</span> 
-        <span class="token string">"NoSQL"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"likes"</span> <span class="token operator">:</span> <span class="token number">100.0</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h3><ul>
-<li>MongoDB通过collection对象的<code>update()</code>来更新集合中的文档，语法如下；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.update(
-   &lt;query&gt;,
-   &lt;update&gt;,
-   &#123;
-     multi: &lt;boolean&gt;
-   &#125;
-)
-# query：修改的查询条件，类似于SQL中的WHERE部分
-# update：更新属性的操作符，类似与SQL中的SET部分
-# multi：设置为true时会更新所有符合条件的文档，默认为false只更新找到的第一条<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>将title为<code>MongoDB 教程</code>的所有文档的title修改为<code>MongoDB</code>；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.update(
-   &#123;&#39;title&#39;:&#39;MongoDB 教程&#39;&#125;,
-   &#123;$set:&#123;&#39;title&#39;:&#39;MongoDB&#39;&#125;&#125;,
-   &#123;multi: true&#125;
-)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>除了<code>update()</code>方法以外，<code>save()</code>方法可以用来替换已有文档，语法如下；</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.collection.save(document)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>这次我们将<code>ObjectId</code>为<code>61adbdc22e9085f6bd109dc7</code>的文档的title改为<code>MongoDB 教程</code>；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.save(&#123;
- &quot;_id&quot; : ObjectId(&quot;61adbdc22e9085f6bd109dc7&quot;),
-    &quot;title&quot; : &quot;MongoDB 教程&quot;,
-    &quot;description&quot; : &quot;MongoDB 是一个 Nosql 数据库&quot;,
-    &quot;by&quot; : &quot;wangnaixing&quot;,
-    &quot;url&quot; : &quot;https:&#x2F;&#x2F;www.mongodb.com&#x2F;&quot;,
-    &quot;tags&quot; : [ 
-        &quot;mongodb&quot;, 
-        &quot;database&quot;, 
-        &quot;NoSQL&quot;
-    ],
-    &quot;likes&quot; : 100.0
-&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h3><ul>
-<li>MongoDB通过collection对象的<code>remove()</code>方法来删除集合中的文档，语法如下；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.remove(
-   &lt;query&gt;,
-   &#123;
-     justOne: &lt;boolean&gt;
-   &#125;
-)
-# query：删除的查询条件，类似于SQL中的WHERE部分
-# justOne：设置为true只删除一条记录，默认为false删除所有记录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>删除title为<code>MongoDB 教程</code>的所有文档；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.remove(
-   &lt;query&gt;,
-   &#123;
-     justOne: &lt;boolean&gt;
-   &#125;
-)
-# query：删除的查询条件，类似于SQL中的WHERE部分
-# justOne：设置为true只删除一条记录，默认为false删除所有记录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">db.article.remove(
-&#123;&#39;title&#39;:&#39;MongoDB 教程&#39;&#125;,
-&#123;justone:false&#125;
-)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="查询文档"><a href="#查询文档" class="headerlink" title="查询文档"></a>查询文档</h3><ul>
-<li>MongoDB通过collection对象的<code>find()</code>方法来查询文档，语法如下；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.find(query, projection)
-# query：查询条件，类似于SQL中的WHERE部分
-# projection：可选，使用投影操作符指定返回的键
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>查询<code>article</code>集合中的所有文档；</li>
-</ul>
-<p>先插入json三条数据</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token comment">/* 1 */</span>
-<span class="token punctuation">&#123;</span>
-
-    <span class="token property">"title"</span> <span class="token operator">:</span> <span class="token string">"MongoDB 教程"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span> <span class="token operator">:</span> <span class="token string">"MongoDB 是一个 Nosql 数据库"</span><span class="token punctuation">,</span>
-    <span class="token property">"by"</span> <span class="token operator">:</span> <span class="token string">"Andy"</span><span class="token punctuation">,</span>
-    <span class="token property">"url"</span> <span class="token operator">:</span> <span class="token string">"https://www.mongodb.com/"</span><span class="token punctuation">,</span>
-    <span class="token property">"tags"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
-        <span class="token string">"mongodb"</span><span class="token punctuation">,</span>
-        <span class="token string">"database"</span><span class="token punctuation">,</span>
-        <span class="token string">"NoSQL"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"likes"</span> <span class="token operator">:</span> <span class="token number">50.0</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token comment">/* 2 */</span>
-<span class="token punctuation">&#123;</span>
+<search> 
   
-    <span class="token property">"title"</span> <span class="token operator">:</span> <span class="token string">"Elasticsearch 教程"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span> <span class="token operator">:</span> <span class="token string">"Elasticsearch 是一个搜索引擎"</span><span class="token punctuation">,</span>
-    <span class="token property">"by"</span> <span class="token operator">:</span> <span class="token string">"Ruby"</span><span class="token punctuation">,</span>
-    <span class="token property">"url"</span> <span class="token operator">:</span> <span class="token string">"https://www.elastic.co/cn/"</span><span class="token punctuation">,</span>
-    <span class="token property">"tags"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
-        <span class="token string">"elasticearch"</span><span class="token punctuation">,</span>
-        <span class="token string">"database"</span><span class="token punctuation">,</span>
-        <span class="token string">"NoSQL"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"likes"</span> <span class="token operator">:</span> <span class="token number">100.0</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token comment">/* 3 */</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token property">"title"</span> <span class="token operator">:</span> <span class="token string">"Redis 教程"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span> <span class="token operator">:</span> <span class="token string">"Redis 是一个key-value数据库"</span><span class="token punctuation">,</span>
-    <span class="token property">"by"</span> <span class="token operator">:</span> <span class="token string">"Andy"</span><span class="token punctuation">,</span>
-    <span class="token property">"url"</span> <span class="token operator">:</span> <span class="token string">"https://redis.io/"</span><span class="token punctuation">,</span>
-    <span class="token property">"tags"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
-        <span class="token string">"redis"</span><span class="token punctuation">,</span>
-        <span class="token string">"database"</span><span class="token punctuation">,</span>
-        <span class="token string">"NoSQL"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"likes"</span> <span class="token operator">:</span> <span class="token number">150.0</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">db.article.find()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206160118.jpg"></p>
-<ul>
-<li>MongoDB中的条件操作符，通过与SQL语句的对比来了解下；</li>
-</ul>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206160308.jpg"></p>
-<ul>
-<li>条件查询，查询title为<code>MongoDB 教程</code>的所有文档；</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.article.find(&#123;&#39;title&#39;:&#39;MongoDB 教程&#39;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>条件查询，查询likes大于50的所有文档；</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.article.find(&#123;&#39;likes&#39;:&#123;$gt:50&#125;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>ND条件可以通过在<code>find()</code>方法传入多个键，以逗号隔开来实现，例如查询title为<code>MongoDB 教程</code>并且by为<code>Andy</code>的所有文档；</p>
-<pre class="line-numbers language-none"><code class="language-none">db.article.find(&#123;&#39;title&#39;:&#39;MongoDB 教程&#39;,&#39;by&#39;:&#39;Andy&#39;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>OR条件可以通过使用<code>$or</code>操作符实现，例如查询title为<code>Redis 教程</code>或<code>MongoDB 教程</code>的所有文档；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;$or:[&#123;&#39;title&#39;:&#39;Redis 教程&#39;&#125;,&#123;&#39;title&#39;:&#39;MongoDB 教程&#39;&#125;]&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>AND 和 OR条件的联合使用，例如查询likes大于50，并且title为<code>Redis 教程</code>或者<code>&quot;MongoDB 教程</code>的所有文档。</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;&#39;likes&#39;:&#123;$gt:50&#125;,$or:[&#123;&quot;title&quot;: &quot;Redis 教程&quot;&#125;,&#123;&quot;title&quot;: &quot;MongoDB 教程&quot;&#125;]&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h2><h3 id="Limit与Skip操作"><a href="#Limit与Skip操作" class="headerlink" title="Limit与Skip操作"></a>Limit与Skip操作</h3><pre class="line-numbers language-none"><code class="language-none">db.collection.find().limit(NUMBER)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>只查询article集合中的2条数据；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find().limit(2)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>跳过指定数量的文档来读取，可以使用<code>skip()</code>方法，语法如下；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.find().limit(NUMBER).skip(NUMBER)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>从第二条开始，查询article集合中的2条数据；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find().limit(2).skip(1)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
-<li>在MongoDB中使用<code>sort()</code>方法对数据进行排序，<code>sort()</code>方法通过参数来指定排序的字段，并使用1和-1来指定排序方式，1为升序，-1为降序；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.find().sort(&#123;KEY:1&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>按article集合中文档的likes字段降序排列；</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.article.find().sort(&#123;KEY:-1&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul>
-<li>索引通常能够极大的提高查询的效率，如果没有索引，MongoDB在读取数据时必须扫描集合中的每个文件并选取那些符合查询条件的记录。</li>
-<li>MongoDB使用<code>createIndex()</code>方法来创建索引，语法如下；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.createIndex(keys, options)
-# background：建索引过程会阻塞其它数据库操作，设置为true表示后台创建，默认为false
-# unique：设置为true表示创建唯一索引
-# name：指定索引名称，如果没有指定会自动生成<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>给title和description字段创建索引，1表示升序索引，-1表示降序索引，指定以后台方式创建；</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.article.createIndex(&#123;&quot;title&quot;:1,&quot;description&quot;:-1&#125;,&#123;background:true&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>查看article集合中已经创建的索引；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.getIndexs()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/* 1 */</span>
-<span class="token punctuation">[</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token string">"v"</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token string">"key"</span> <span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-            <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token number">1</span>
-        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-        <span class="token string">"name"</span> <span class="token operator">:</span> <span class="token string">"_id_"</span><span class="token punctuation">,</span>
-        <span class="token string">"ns"</span> <span class="token operator">:</span> <span class="token string">"test.article"</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token string">"v"</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token string">"key"</span> <span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-            <span class="token string">"title"</span> <span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
-            <span class="token string">"description"</span> <span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1.0</span>
-        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-        <span class="token string">"name"</span> <span class="token operator">:</span> <span class="token string">"title_1_description_-1"</span><span class="token punctuation">,</span>
-        <span class="token string">"ns"</span> <span class="token operator">:</span> <span class="token string">"test.article"</span><span class="token punctuation">,</span>
-        <span class="token string">"background"</span> <span class="token operator">:</span> <span class="token boolean">true</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h3><ul>
-<li>MongoDB中的聚合使用<code>aggregate()</code>方法，类似于SQL中的group by语句，语法如下；</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.collection.aggregate(AGGREGATE_OPERATION)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>聚合中常用操作符如下；</li>
-</ul>
-<p><img src="D:\my_notebook\typora笔记图片统一管理处\QQ截图20211206163848.jpg"></p>
-<ul>
-<li>根据by字段聚合文档并计算文档数量，类似与SQL中的count()函数；</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.article.aggregate([&#123;$group : &#123;_id : &quot;$by&quot;, sum_count : &#123;$sum : 1&#125;&#125;&#125;])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* 1 */</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token string">"Andy"</span><span class="token punctuation">,</span>
-    <span class="token string">"sum_count"</span> <span class="token operator">:</span> <span class="token number">2.0</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token comment">/* 2 */</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token string">"Ruby"</span><span class="token punctuation">,</span>
-    <span class="token string">"sum_count"</span> <span class="token operator">:</span> <span class="token number">1.0</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>根据by字段聚合文档并计算likes字段的平局值，类似与SQL中的avg()语句；</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">db.article.aggregate([&#123;$group : &#123;_id : &quot;$by&quot;, avg_likes : &#123;$avg : &quot;$likes&quot;&#125;&#125;&#125;])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* 1 */</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token string">"Andy"</span><span class="token punctuation">,</span>
-    <span class="token string">"avg_likes"</span> <span class="token operator">:</span> <span class="token number">100.0</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token comment">/* 2 */</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token string">"Ruby"</span><span class="token punctuation">,</span>
-    <span class="token string">"avg_likes"</span> <span class="token operator">:</span> <span class="token number">100.0</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><ul>
-<li><p>MongoDB使用<code>$regex</code>操作符来设置匹配字符串的正则表达式，可以用来模糊查询，类似于SQL中的like操作；</p>
-</li>
-<li><p>例如查询title中包含<code>教程</code>的文档；</p>
-</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;title:&#123;$regex:&quot;教程&quot;&#125;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>不区分大小写的模糊查询，使用<code>$options</code>操作符；</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;title:&#123;$regex:&quot;elasticsearch&quot;,$options:&quot;$i&quot;&#125;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="结合SpringBoot使用"><a href="#结合SpringBoot使用" class="headerlink" title="结合SpringBoot使用"></a>结合SpringBoot使用</h2><p>具体参考：mall整合MongoDB实现文档操作</p>
-]]></content>
-  </entry>
+  
+    
+    <entry>
+      <title>了解这些软件设计思想，你的思维至少上升一个段位！</title>
+      <link href="/2021/12/07/%E4%BA%86%E8%A7%A3%E8%BF%99%E4%BA%9B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%8C%E4%BD%A0%E7%9A%84%E6%80%9D%E7%BB%B4%E8%87%B3%E5%B0%91%E4%B8%8A%E5%8D%87%E4%B8%80%E4%B8%AA%E6%AE%B5%E4%BD%8D%EF%BC%81/"/>
+      <url>/2021/12/07/%E4%BA%86%E8%A7%A3%E8%BF%99%E4%BA%9B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%8C%E4%BD%A0%E7%9A%84%E6%80%9D%E7%BB%B4%E8%87%B3%E5%B0%91%E4%B8%8A%E5%8D%87%E4%B8%80%E4%B8%AA%E6%AE%B5%E4%BD%8D%EF%BC%81/</url>
+      
+        <content type="html"><![CDATA[<h1 id="了解这些软件设计思想，你的思维至少上升一个段位！"><a href="#了解这些软件设计思想，你的思维至少上升一个段位！" class="headerlink" title="了解这些软件设计思想，你的思维至少上升一个段位！"></a>了解这些软件设计思想，你的思维至少上升一个段位！</h1><h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素） 的书，该书首次提到了软件开发中设计模式的概念，四位作者合称 GOF（全拼 Gang of Four），简称四人帮！</p><blockquote><p>书中共说到 23 种设计模式，这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。</p></blockquote><p>当然，随着软件的快速发展，还出现另一类我们所熟知的设计模式：<strong>J2EE 设计模式</strong>。</p><p>首先要跟大家说明的是，<strong>设计模式其实不是一项新技术</strong>，而是众多软件开发人员经过相当长的一段时间的试用和试错总结出来的一套软件设计开发实践方案，学习这些知识有助于经验不足的开发人员通过一种简单快捷的方式来学习软件设计。</p><p>也不BB了，下面我们就一起来深入了解一下大神们总结的这套方法论！</p><h3 id="二、方法论"><a href="#二、方法论" class="headerlink" title="二、方法论"></a>二、方法论</h3><h4 id="2-1、单一职责原则"><a href="#2-1、单一职责原则" class="headerlink" title="2.1、单一职责原则"></a>2.1、单一职责原则</h4><p>单一职责原则，顾名思义，一个类负责一个功能的处理，比如我们在代码中经常会涉及到调用第三方的接口，通常我们往往会将一个接口请求方法封装成一个<code>http</code>请求的工具类，这样其他的调用方能非常方便的进行调用。</p><p>单一职责原则，主要的目的是将一个功能划分到合适的粒度，让这些各自执行单一职责的类，各司其职。</p><p>还有我们常常说的mvc模式，将数据操作与业务逻辑处理进行分离，也是属于单一职责原则的一种。</p><h4 id="2-2、开闭原则"><a href="#2-2、开闭原则" class="headerlink" title="2.2、开闭原则"></a>2.2、开闭原则</h4><p>开闭原则，指的是：<strong>对扩展开放，对修改关闭</strong>。这里的意思是在增加新功能的时候，<strong>能不改代码就尽量不要改，如果只增加代码就完成了新功能，那是最好的</strong>。</p><p>下面我举个简单的例子，大家可能就懂了。</p><p>在实际的项目开发过程中，尤其是与第三方公司进行接口对接的时候，例如 a 公司，他的接口协议要求采用<code>rsa</code>加密；b 公司，他的接口协议采用<code>aes</code>加密，c公司，他的接口协议要求采用<code>md5</code>就可以了…</p><p>在一开始的时候，可能你没有想那么多，设想所有其他公司跟你对接的时候，全部采用<code>rsa</code>加密，那么当第二家公司来了时候，要求采用<code>aes</code>，这个时候，你必须得改代码才能支持这种功能，假如又来了其他公司呢？</p><p>在这种情况下，我们可以采用面向接口编程的思想，定义一个抽象的方法，然后针对不同的加密算法，编写不同的实现类，当新来了一家公司要求采用不同的加密算法时，我们只需要扩展一个新的实现类，在逻辑处理层进行路由即可快速完成开发和对接！</p><p>实现开闭原则的主要步骤就是将业务方法里面的逻辑进行抽象化，从而实现逻辑层面代码的解耦。</p><h4 id="2-3、里氏代换原则"><a href="#2-3、里氏代换原则" class="headerlink" title="2.3、里氏代换原则"></a>2.3、里氏代换原则</h4><p>里氏替换原则，通俗的说就是：子类可以扩展父类的功能，但不能改变父类原有的功能。</p><p>也就是说：<strong>子类继承父类时，除添加新的方法完成新增功能外，尽量不要重写父类的方法</strong>。</p><p>当子类在重写父类的方法时，如果使用不当，很可能会改变父类方法中的逻辑语义，进而造成逻辑处理混乱。</p><p>在实际的业务开发中，尤其是大家在使用类继承操作时，应当谨慎重新父类方法，方法定义的时候，名称也尽量不要发生重名。</p><p>同时，应该注意类过多的继承，例如 A 类继承自 B 类，B 类 继承自 C 类，C 类继承 D 类，这种场景下，第一：逻辑很可能非常复杂，代码可读性可能很差，第二种可能会出现方法名或者属性名冲突。</p><p>我曾经修改一个老项目 bug 的时候，就出现过这种情况，一个实体类出现三层关系的继承，当我把子类进行序列化成<code>json</code>的时候，突然报错，原因就是因为里面有个属性，在基类里面也定义了，但是类型却不一样，也就是说在这个子类里面有两个相同的属性，只是字段类型不同而已，从而导致这个序列化报错。</p><p>因此，大家在使用类继承操作时，一定要谨慎处理，最好的情况下是一层关系继承，这样即使出现问题了，也好排查，范围可控；继承关系多了，反而代码变的非常复杂，每个方法逻辑都需要一一梳理清楚，你才敢去下手，这种情况下，反而为难了自己！</p><h4 id="2-4、依赖倒转原则"><a href="#2-4、依赖倒转原则" class="headerlink" title="2.4、依赖倒转原则"></a>2.4、依赖倒转原则</h4><p>依赖倒转原则，简单的说就是<strong>面向接口编程，依赖于抽象而不依赖于具体</strong>，他是实现<strong>开闭原则</strong>的一个途径。</p><p>依赖倒转原则主要有以下几点：</p><ul><li>高层的模块不应该依赖于低层的模块，这两者都应该依赖于其抽象</li><li>抽象不应该依赖细节</li><li>细节应该依赖抽象</li></ul><p>换句话说，就是将具体类里面的方法进行逻辑抽象化，提升到接口或者抽象类里面，由具体的实现类去实现具体的业务逻辑，抽象层不关注细节。</p><p>也就是我们俗称的，不管遇到啥事情，先看大局，在看小点。</p><p>举个例子，例如我们常常使用的<code>MVC</code>框架，在<code>Service</code>层通常会<strong>先编写接口类，然后在编写服务实现类，这就是典型的面向接口编程</strong>，这种方案有哪些好处呢？</p><ul><li>可以减少研发人员并行开发引起的风险</li><li>可以显著提高代码的可读性和可维护性</li><li>可以降低类间的耦合性</li></ul><p>当一个大项目开发的时候，试想一下，如果2个以上研发人员在编写同一个类的同一个方法，没有定义接口的情况下，随着时间的流逝，这个类大概率会非常混乱，同时，里面的方法估计阅读起来也很困难，一眼望去基本上不知道这个方法是干嘛的，尤其是重载方法很多的时候，尤其困难。</p><p>当我们引入接口之后，将所有的核心方法全部抽象定义，当我们对其进行二次开发的时，也会能快速定位到以前的和谐方法，然后进行快速定位和维护。</p><p>面向接口编程，还有一个很大的好处，就是可以降低类之间的耦合度。</p><h4 id="2-5、接口隔离原则"><a href="#2-5、接口隔离原则" class="headerlink" title="2.5、接口隔离原则"></a>2.5、接口隔离原则</h4><p>接口隔离原则的意思是：<strong>尽量将一个接口拆的更细，使用多个隔离的接口，比使用单个接口要好</strong>。</p><p>这个原则基本上是从大型软件架构出发、便于升级和维护的思想诞生出来的。</p><p>比如，一个第三方保险服务系统里面，如果是小项目，你可以在一个接口里面定义<code>投保方法</code>、<code>取消方法</code>、 <code>退保方法</code>、 <code>理赔方法</code>、 <code>保单方法</code>这5种方法。</p><p>当你只跟一家保险公司合作的时候，这套接口定义是没问题的，但是假如现在公司的业务发展的非常快，已经引入10几家保险公司了，你会发现这个接口基本上顶不住了，在此有两种方法可以解决这种技术难题：</p><ul><li>1、针对不同的保险公司，又重新定义一个接口，然后还是里面的5种方法</li><li>2、针对不同的操作行为，比如<code>投保</code>，单独定义一套接口，然后针对不同的保险公司编写不同的实现类</li></ul><p>这两种其实本质都是将一个接口，拆成多个颗粒度更细的接口，然后从行为上，让各种的实现类更加独立，进而降低类之间的耦合度，开发起来层次清晰，有利于系统的稳定！</p><h4 id="2-6、组合-聚合复用原则"><a href="#2-6、组合-聚合复用原则" class="headerlink" title="2.6、组合/聚合复用原则"></a>2.6、组合/聚合复用原则</h4><p>合成复用原则的意思就是：<strong>尽量使用组合/聚合的方式，而不是使用继承</strong>。</p><p>所谓<strong>组合/聚合的方式</strong>，其实就是我们在<code>springMVC</code>里面使用的<code>ioc</code>依赖注入方式，</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AService</span> <span class="token punctuation">&#123;</span> <span class="token comment">/**     * ioc依赖注入     */</span>    <span class="token annotation punctuation">@Autowired</span>    <span class="token keyword">private</span> <span class="token class-name">BService</span> bService<span class="token punctuation">;</span> <span class="token comment">//业务代码...</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>AService</code>类调用<code>BService</code>类，有两种方式可以实现，第一种就是通过继承方式，可以直接调用；第二种方式就是通过<code>ioc</code>依赖注入的方式，在类里面进行组合操作，然后进行调用。</p><p><strong>很明显，第二种方式，我们使用的爱不释手</strong>！</p><p>这种方式有个好处就是，代码层次清晰，编写优雅，用上之后容易上瘾，推荐使用！</p><h4 id="2-7、迪米特法则"><a href="#2-7、迪米特法则" class="headerlink" title="2.7、迪米特法则"></a>2.7、迪米特法则</h4><p>迪米特法则，又称最少知道原则，意思就是说：<strong>一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立</strong>。</p><p>类似单一原则的思想，例如我们编写实体类的时候，基本上就是属性名称，加<code>get/set</code>。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">&#123;</span> <span class="token comment">/**     * 用户id     */</span>    <span class="token keyword">private</span> <span class="token class-name">Long</span> userId<span class="token punctuation">;</span> <span class="token comment">/**     * 用户姓名     */</span> <span class="token keyword">private</span> <span class="token class-name">String</span> userName<span class="token punctuation">;</span> <span class="token keyword">public</span> <span class="token class-name">Long</span> <span class="token function">getUserId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userId<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span> <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserId</span><span class="token punctuation">(</span><span class="token class-name">Long</span> userId<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>  <span class="token keyword">this</span><span class="token punctuation">.</span>userId <span class="token operator">=</span> userId<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span> <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getUserName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userName<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span> <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserName</span><span class="token punctuation">(</span><span class="token class-name">String</span> userName<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>  <span class="token keyword">this</span><span class="token punctuation">.</span>userName <span class="token operator">=</span> userName<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>当一个实体里面出现跟自己没太大关系的代码时，例如数据运算逻辑处理，这个时候应当将这部分代码全部清理出去，交由业务处理层来出来。</p><p>从实体类的定义来说，它主要的功能就是承担数据展示，当多个业务处理层在使用这个实体类的时候，如果你们嵌套了很多的数据运算逻辑，可能在返回的时候，客户端得到的实体类的属性值，并不是正确的结果！</p><h3 id="三、小结"><a href="#三、小结" class="headerlink" title="三、小结"></a>三、小结</h3><p>上面一共介绍了 7 种设计原则，基本上都是大神们经过很多次血的教训，总结出来的一套方法论。</p><p>这些设计原则，可以给同行在实际的软件设计过程中，提供一些思路，具体的应用，还需要结合实际的业务场景进一步思考，怎么让系统变的更加可靠，开发更佳迅速，代码阅读起来更佳轻松，关键在于灵活运用！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 架构师 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于给Hexo文章分类页面按钮仿书本样式美化</title>
+      <link href="/2021/12/07/%E5%85%B3%E4%BA%8E%E7%BB%99hexo%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E6%8C%89%E9%92%AE%E4%BB%BF%E4%B9%A6%E6%9C%AC%E6%A0%B7%E5%BC%8F%E7%BE%8E%E5%8C%96/"/>
+      <url>/2021/12/07/%E5%85%B3%E4%BA%8E%E7%BB%99hexo%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E6%8C%89%E9%92%AE%E4%BB%BF%E4%B9%A6%E6%9C%AC%E6%A0%B7%E5%BC%8F%E7%BE%8E%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于给Hexo文章分类页面按钮仿书本样式美化"><a href="#关于给Hexo文章分类页面按钮仿书本样式美化" class="headerlink" title="关于给Hexo文章分类页面按钮仿书本样式美化"></a>关于给Hexo文章分类页面按钮仿书本样式美化</h1><blockquote><p>前言：最近成迷于美化Hexo博客样式，发现了这个超好看的样式，美化了一下，基于Matery主题设置的，其他主题原理也一样可参考。</p></blockquote><p>废话不多说，先上图：</p><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206083338.jpg"></p><p>特点: 都是<code>div+css</code>美化效果，所以没啥难度，可以直接复制我以下的代码，或者做修改都可。</p><h3 id="引入html代码"><a href="#引入html代码" class="headerlink" title="引入html代码"></a>引入<code>html</code>代码</h3><ul><li>1、首先，找到位置为<code>/layout/category-cloud.ejs</code>的文件，后面的html和css代码都放在此<code>category-cloud.ejs</code>文件即可。</li><li>2、然后，定位到<code>href=&quot;&lt;%- url_for(category.path) %&gt;&quot;</code>的a标签位置：</li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 定位到该位置 <span class="token operator">--</span><span class="token operator">></span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%- url_for(category.path) %>"</span> title<span class="token operator">=</span><span class="token string">"&lt;%- category.name %>: &lt;%- category.length %>"</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>3、直接将该a标签里面的内容全部替换为以下代码：</li></ul><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>moleskine-wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>moleskine-notebook<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chip notebook-cover center-align waves-effect waves-light                &lt;% if (isCategory &amp;&amp; category.name == page.category) &#123; %> chip-active &lt;% &#125; else &#123; %> chip-default &lt;% &#125; %><span class="token punctuation">"</span></span>                        <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> &lt;%- color %><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>                                                                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>notebook-skin                        &lt;% if (isCategory &amp;&amp; category.name == page.category) &#123; %> chip-active &lt;% &#125; else &#123; %> chip-default &lt;% &#125; %><span class="token punctuation">"</span></span>                        <span class="token punctuation">></span></span>&lt;%- category.name %>                                         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>notebook-page dotted<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="设置css样式"><a href="#设置css样式" class="headerlink" title="设置css样式"></a>设置css样式</h3><p>这部分同样放在此<code>category-cloud.ejs</code>文件即可。</p><pre class="line-numbers language-css" data-language="css"><code class="language-css">&lt;style>    <span class="token comment">/* 文章分类书本样式 */</span>    <span class="token selector">.chip-container .tag-chips</span> <span class="token punctuation">&#123;</span>        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>        <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>        <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.chip-container .tag-chips a</span> <span class="token punctuation">&#123;</span>        <span class="token property">margin</span><span class="token punctuation">:</span> 0 7px 10px<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.chip-container .chip</span> <span class="token punctuation">&#123;</span>        <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% / 4<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token property">min-width</span><span class="token punctuation">:</span> 10em<span class="token punctuation">;</span>        <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>        <span class="token property">transition</span><span class="token punctuation">:</span> .5s linear<span class="token punctuation">;</span>        <span class="token property">padding</span><span class="token punctuation">:</span> 19px 0<span class="token punctuation">;</span>        <span class="token property">line-height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>        <span class="token property">z-index</span><span class="token punctuation">:</span> 990<span class="token punctuation">;</span>        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 15px 15px 5px<span class="token punctuation">;</span>        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left center 0<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.chip-container .notebook-cover::before</span> <span class="token punctuation">&#123;</span>        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>        <span class="token property">width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% + 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token property">top</span><span class="token punctuation">:</span> -1px<span class="token punctuation">;</span>        <span class="token property">z-index</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>        <span class="token property">border-radius</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>        <span class="token property">right</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>        <span class="token property">transition</span><span class="token punctuation">:</span> 2s ease<span class="token punctuation">;</span>        <span class="token comment">/* background: linear-gradient(to right,#9c2e2b 0,#cc4b48 12%,#9c2e2b 25%,#cc4b48 37%,#9c2e2b 50%,#cc4b48 62%,#9c2e2b 75%,#cc4b48 87%,#9c2e2b 100%); */</span>        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span>#1e606e 0<span class="token punctuation">,</span>#2e95aa 12%<span class="token punctuation">,</span>#1e606e 25%<span class="token punctuation">,</span>#2e95aa 37%<span class="token punctuation">,</span>#1e606e 50%<span class="token punctuation">,</span>#2e95aa 62%<span class="token punctuation">,</span>#1e606e 75%<span class="token punctuation">,</span>#2e95aa 87%<span class="token punctuation">,</span>#1e606e 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.chip .notebook-skin</span> <span class="token punctuation">&#123;</span>        <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>        <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>        <span class="token property">background</span><span class="token punctuation">:</span> #e8e8e0<span class="token punctuation">;</span>        <span class="token property">margin-top</span><span class="token punctuation">:</span> 42px<span class="token punctuation">;</span>        <span class="token property">padding</span><span class="token punctuation">:</span> 10px 32px 64px 10px<span class="token punctuation">;</span>        <span class="token property">font-size</span><span class="token punctuation">:</span> 19px<span class="token punctuation">;</span>        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>        <span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span>        <span class="token property">color</span><span class="token punctuation">:</span> #222<span class="token punctuation">;</span>        <span class="token property">text-align</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>        <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 1px 1px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>.2<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.chip .notebook-skin:before</span> <span class="token punctuation">&#123;</span>        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>        <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>        <span class="token property">height</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>        <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>        <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>        <span class="token property">background</span><span class="token punctuation">:</span> #cddc39<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.notebook-cover</span> <span class="token punctuation">&#123;</span>        <span class="token property">background</span><span class="token punctuation">:</span> #cc4b48<span class="token punctuation">;</span>        <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>        <span class="token property">width</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 15px 15px 5px<span class="token punctuation">;</span>        <span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span>        <span class="token property">transition</span><span class="token punctuation">:</span> .5s linear<span class="token punctuation">;</span>        <span class="token property">transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left center 0<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.moleskine-wrapper</span> <span class="token punctuation">&#123;</span>        <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% / 4<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token property">min-width</span><span class="token punctuation">:</span> 10em<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.moleskine-notebook:hover .notebook-cover</span> <span class="token punctuation">&#123;</span>        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>-50deg<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token property">z-index</span><span class="token punctuation">:</span> 99<span class="token punctuation">;</span>        <span class="token property">box-shadow</span><span class="token punctuation">:</span> 20px 10px 50px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>.2<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.moleskine-notebook</span> <span class="token punctuation">&#123;</span>        <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>        <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>        <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>        <span class="token property">transition</span><span class="token punctuation">:</span> .5s linear<span class="token punctuation">;</span>        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 15px 15px 5px<span class="token punctuation">;</span>        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left center 0<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.moleskine-notebook:hover</span> <span class="token punctuation">&#123;</span>        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>-10deg<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.notebook-page.dotted</span> <span class="token punctuation">&#123;</span>        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom<span class="token punctuation">,</span>#fbfae8 9px<span class="token punctuation">,</span>#e4e4e4 1px<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token property">background-size</span><span class="token punctuation">:</span> 100% 10px<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.chip-container .chip:hover</span> <span class="token punctuation">&#123;</span>        <span class="token property">background</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.notebook-page</span> <span class="token punctuation">&#123;</span>        <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>        <span class="token property">width</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>        <span class="token property">top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>        <span class="token property">background-color</span><span class="token punctuation">:</span> #fbfae8<span class="token punctuation">;</span>        <span class="token property">z-index</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 16px 16px 5px<span class="token punctuation">;</span>        <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>&lt;/style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>至此，结束。很简单，但超好看。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> matery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MongoDB快速入门，掌握这些刚刚好！</title>
+      <link href="/2021/12/06/MongoDB%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%EF%BC%8C%E6%8E%8C%E6%8F%A1%E8%BF%99%E4%BA%9B%E5%88%9A%E5%88%9A%E5%A5%BD%EF%BC%81/"/>
+      <url>/2021/12/06/MongoDB%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%EF%BC%8C%E6%8E%8C%E6%8F%A1%E8%BF%99%E4%BA%9B%E5%88%9A%E5%88%9A%E5%A5%BD%EF%BC%81/</url>
+      
+        <content type="html"><![CDATA[<h1 id="MongoDB快速入门，掌握这些刚刚好！"><a href="#MongoDB快速入门，掌握这些刚刚好！" class="headerlink" title="MongoDB快速入门，掌握这些刚刚好！"></a>MongoDB快速入门，掌握这些刚刚好！</h1><blockquote><p>虽说现在关系型数据库还是主流，但是面对某些需求的时候，需要非关系型数据库来补充它，学习一个主流的NoSQL数据库还是很有必要的。MongoDB是一个功能丰富的NoSQL数据库，本文整理了它最常用的部分形成了这篇入门教程，希望对大家有所帮助。</p></blockquote><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写，旨在为WEB应用提供可扩展的高性能数据存储解决方案。MongoDB是一个介于关系型数据库和非关系型数据库之间的产品，是非关系型数据库当中功能最丰富，最像关系型数据库的。`</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote><p>以前写的MongoDB安装教程是基于3.2版本的，发现有的朋友使用新版本安装有问题，这次我们使用最新版本再来安装一次，本文所使用的MongoDB版本为4.2.5，总的来说，新版本的安装更简单了。</p></blockquote><h3 id="Windows下的安装"><a href="#Windows下的安装" class="headerlink" title="Windows下的安装"></a>Windows下的安装</h3><ul><li>下载MongoDB安装包，选择<code>Windows x64</code>版本安装，下载地址：<a href="https://www.mongodb.com/download-center/community">https://www.mongodb.com/download-center/community</a></li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206142854.jpg"></p><ul><li>运行MongoDB安装包并选择自定义安装，设置好安装路径；本次我选择默认路径。</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206143519.jpg"></p><ul><li>配置MongoDB，让MongoDB作为服务运行，并配置好数据目录和日志目录；</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206143948.jpg"></p><ul><li>取消MongoDB Compass的安装选项（不取消安装极慢），需要可自行安装；</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206144004.jpg"></p><ul><li>双击<code>mongo.exe</code>可以运行MongoDB自带客户端，操作MongoDB；</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206144226.jpg"></p><ul><li>连接成功后会显示如下信息；</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206144307.jpg"></p><ul><li>如果需要移除MongoDB服务，只需使用管理员权限运行<code>cmd</code>工具，并输入如下命令。</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sc.exe delete MongoDB<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206144431.jpg"></p><h3 id="Linux下的安装"><a href="#Linux下的安装" class="headerlink" title="Linux下的安装"></a>Linux下的安装</h3><p>准备一个新的虚机机，执行如下命令安装Docker，启动服务测试服务是否可用</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ yum remove docker \                  docker-client \                  docker-client-latest \                  docker-common \                  docker-latest \                  docker-latest-logrotate \                  docker-logrotate \                  docker-engine<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ yum install -y yum-utils$ yum-config-manager --add-repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;docker-ce&#x2F;linux&#x2F;centos&#x2F;docker-ce.repo$ yum makecache fast$ yum install docker-ce docker-ce-cli containerd.io    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ systemctl start docker$ docker run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>下载MongoDB的Docker镜像；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ docker pull mongo:4.2.5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用Docker命令启动MongoDB服务；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ docker run -p 27017:27017 --name mongo -v &#x2F;mydata&#x2F;mongo&#x2F;db:&#x2F;data&#x2F;db -d mongo:4.2.5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>有时候我们需要为MongoDB设置账号，可以使用如下命令启动；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ docker run -p 27017:27017 --name mongo -v &#x2F;mydata&#x2F;mongo&#x2F;db:&#x2F;data&#x2F;db -d mongo:4.2.5 --auth<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>然后我们需要进入容器中的MongoDB客户端；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ docker exec -it mongo mongo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>之后在<code>admin</code>集合中创建一个账号用于连接，这里创建的是基于<code>root</code>角色的超级管理员帐号；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">use admindb.createUser(&#123;    user: &#39;mongoadmin&#39;,    pwd: &#39;wangnaixing&#39;,    roles: [ &#123; role: &quot;root&quot;, db: &quot;admin&quot; &#125; ] &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>创建完成后验证是否可以登录；</li></ul><pre class="line-numbers language-none"><code class="language-none">db.auth(&quot;mongoadmin&quot;,&quot;wangnaixing&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>整个账号创建过程可以参考下图。</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206165523.jpg"></p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ firewall-cmd --zone&#x3D;public --add-port&#x3D;27017&#x2F;tcp --permanent$ systemctl restart firewalld.service #放行端口27017<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>使用Navicat Premium来测试</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206170315-16387816815135.jpg"></p><h3 id="客户端工具"><a href="#客户端工具" class="headerlink" title="客户端工具"></a>客户端工具</h3><blockquote><p>MongoDB的客户端工具有很多，上面没安装的MongoDB Compass就是其中之一，另外Navicat 15版本也有MongoDB的管理功能。这里我们使用的是一款免费的客户端工具Robo 3T（以前叫Robomongo）。</p></blockquote><ul><li>先下载客户端工具，下载地址：<a href="https://robomongo.org/download">https://robomongo.org/download</a></li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206150700.jpg"></p><ul><li>下载完成后解压，双击<code>robo3t.exe</code>即可使用；</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206151358.jpg"></p><ul><li><p>之后创建一个到MongoDB的连接；</p><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206151254-16387748156253.jpg"></p></li><li><p>创建连接成功以后，就可以操作MongoDB了。</p></li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206151505.jpg"></p><h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><blockquote><p>MongoDB是非关系型数据库当中最像关系型数据库的，所以我们通过它与关系型数据库的对比，来了解下它的概念。</p></blockquote><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206151929.jpg"></p><h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><ul><li>创建数据库，使用<code>use</code>命令去创建数据库，当插入第一条数据时会创建数据库，例如创建一个<code>test</code>数据库；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&gt; use testswitched to db test&gt; db.article.insert(&#123;name:&quot;MongoDB教程&quot;&#125;)WriteResult(&#123; &quot;nInserted&quot; : 1 &#125;)&gt; show dbsadmin   0.000GBconfig  0.000GBlocal   0.000GBtest    0.000GB&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>删除数据库，使用db对象中的<code>dropDatabase()</code>方法来删除；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&gt; db.dropDatabase()&#123; &quot;dropped&quot; : &quot;test&quot;, &quot;ok&quot; : 1 &#125;&gt; show dbsadmin   0.000GBconfig  0.000GBlocal   0.000GB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="集合操作"><a href="#集合操作" class="headerlink" title="集合操作"></a>集合操作</h2><ul><li>创建集合，使用db对象中的<code>createCollection()</code>方法来创建集合，例如创建一个<code>article</code>集合；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&gt; use testswitched to db test&gt; db.createCollection(&quot;article&quot;)&#123; &quot;ok&quot; : 1 &#125;&gt; show collectionsarticle<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>删除集合，使用collection对象的<code>drop()</code>方法来删除集合，例如删除一个<code>article</code>集合；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">&gt; db.article.drop()true&gt; show collections<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="文档操作"><a href="#文档操作" class="headerlink" title="文档操作"></a>文档操作</h2><blockquote><p>上面的数据库和集合操作是在MongoDB的客户端中进行的，下面的文档操作都是在Robomongo中进行的。</p></blockquote><h3 id="插入文档"><a href="#插入文档" class="headerlink" title="插入文档"></a>插入文档</h3><ul><li>MongoDB通过collection对象的<code>insert()</code>方法向集合中插入文档，语法如下:</li></ul><pre class="line-numbers language-none"><code class="language-none">db.collection.insert(document)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用collection对象的<code>insert()</code>方法来插入文档，例如插入一个<code>article</code>文档；</li></ul><pre class="line-numbers language-js" data-language="js"><code class="language-js">db<span class="token punctuation">.</span>article<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>title<span class="token operator">:</span> <span class="token string">'MongoDB 教程'</span><span class="token punctuation">,</span>    description<span class="token operator">:</span> <span class="token string">'MongoDB 是一个 Nosql 数据库'</span><span class="token punctuation">,</span>    by<span class="token operator">:</span> <span class="token string">'wangnaixing'</span><span class="token punctuation">,</span>    url<span class="token operator">:</span> <span class="token string">'https://www.mongodb.com/'</span><span class="token punctuation">,</span>    tags<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'mongodb'</span><span class="token punctuation">,</span> <span class="token string">'database'</span><span class="token punctuation">,</span> <span class="token string">'NoSQL'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>    likes<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206153804.jpg"></p><ul><li>系统控制台显示插入一条记录成功！我们查看该文档记录</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206153904.jpg"></p><ul><li>使用collection对象的<code>find()</code>方法可以获取文档，例如获取所有的<code>article</code>文档；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>    <span class="token property">"_id"</span> <span class="token operator">:</span> ObjectId(<span class="token string">"61adbdc22e9085f6bd109dc7"</span>)<span class="token punctuation">,</span>    <span class="token property">"title"</span> <span class="token operator">:</span> <span class="token string">"MongoDB 教程"</span><span class="token punctuation">,</span>    <span class="token property">"description"</span> <span class="token operator">:</span> <span class="token string">"MongoDB 是一个 Nosql 数据库"</span><span class="token punctuation">,</span>    <span class="token property">"by"</span> <span class="token operator">:</span> <span class="token string">"wangnaixing"</span><span class="token punctuation">,</span>    <span class="token property">"url"</span> <span class="token operator">:</span> <span class="token string">"https://www.mongodb.com/"</span><span class="token punctuation">,</span>    <span class="token property">"tags"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>         <span class="token string">"mongodb"</span><span class="token punctuation">,</span>         <span class="token string">"database"</span><span class="token punctuation">,</span>         <span class="token string">"NoSQL"</span>    <span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token property">"likes"</span> <span class="token operator">:</span> <span class="token number">100.0</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h3><ul><li>MongoDB通过collection对象的<code>update()</code>来更新集合中的文档，语法如下；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.update(   &lt;query&gt;,   &lt;update&gt;,   &#123;     multi: &lt;boolean&gt;   &#125;)# query：修改的查询条件，类似于SQL中的WHERE部分# update：更新属性的操作符，类似与SQL中的SET部分# multi：设置为true时会更新所有符合条件的文档，默认为false只更新找到的第一条<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>将title为<code>MongoDB 教程</code>的所有文档的title修改为<code>MongoDB</code>；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.update(   &#123;&#39;title&#39;:&#39;MongoDB 教程&#39;&#125;,   &#123;$set:&#123;&#39;title&#39;:&#39;MongoDB&#39;&#125;&#125;,   &#123;multi: true&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>除了<code>update()</code>方法以外，<code>save()</code>方法可以用来替换已有文档，语法如下；</li></ul><pre class="line-numbers language-none"><code class="language-none">db.collection.save(document)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>这次我们将<code>ObjectId</code>为<code>61adbdc22e9085f6bd109dc7</code>的文档的title改为<code>MongoDB 教程</code>；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.save(&#123; &quot;_id&quot; : ObjectId(&quot;61adbdc22e9085f6bd109dc7&quot;),    &quot;title&quot; : &quot;MongoDB 教程&quot;,    &quot;description&quot; : &quot;MongoDB 是一个 Nosql 数据库&quot;,    &quot;by&quot; : &quot;wangnaixing&quot;,    &quot;url&quot; : &quot;https:&#x2F;&#x2F;www.mongodb.com&#x2F;&quot;,    &quot;tags&quot; : [         &quot;mongodb&quot;,         &quot;database&quot;,         &quot;NoSQL&quot;    ],    &quot;likes&quot; : 100.0&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h3><ul><li>MongoDB通过collection对象的<code>remove()</code>方法来删除集合中的文档，语法如下；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.remove(   &lt;query&gt;,   &#123;     justOne: &lt;boolean&gt;   &#125;)# query：删除的查询条件，类似于SQL中的WHERE部分# justOne：设置为true只删除一条记录，默认为false删除所有记录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>删除title为<code>MongoDB 教程</code>的所有文档；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.remove(   &lt;query&gt;,   &#123;     justOne: &lt;boolean&gt;   &#125;)# query：删除的查询条件，类似于SQL中的WHERE部分# justOne：设置为true只删除一条记录，默认为false删除所有记录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">db.article.remove(&#123;&#39;title&#39;:&#39;MongoDB 教程&#39;&#125;,&#123;justone:false&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="查询文档"><a href="#查询文档" class="headerlink" title="查询文档"></a>查询文档</h3><ul><li>MongoDB通过collection对象的<code>find()</code>方法来查询文档，语法如下；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.find(query, projection)# query：查询条件，类似于SQL中的WHERE部分# projection：可选，使用投影操作符指定返回的键<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>查询<code>article</code>集合中的所有文档；</li></ul><p>先插入json三条数据</p><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token comment">/* 1 */</span><span class="token punctuation">&#123;</span>    <span class="token property">"title"</span> <span class="token operator">:</span> <span class="token string">"MongoDB 教程"</span><span class="token punctuation">,</span>    <span class="token property">"description"</span> <span class="token operator">:</span> <span class="token string">"MongoDB 是一个 Nosql 数据库"</span><span class="token punctuation">,</span>    <span class="token property">"by"</span> <span class="token operator">:</span> <span class="token string">"Andy"</span><span class="token punctuation">,</span>    <span class="token property">"url"</span> <span class="token operator">:</span> <span class="token string">"https://www.mongodb.com/"</span><span class="token punctuation">,</span>    <span class="token property">"tags"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>        <span class="token string">"mongodb"</span><span class="token punctuation">,</span>        <span class="token string">"database"</span><span class="token punctuation">,</span>        <span class="token string">"NoSQL"</span>    <span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token property">"likes"</span> <span class="token operator">:</span> <span class="token number">50.0</span><span class="token punctuation">&#125;</span><span class="token comment">/* 2 */</span><span class="token punctuation">&#123;</span>      <span class="token property">"title"</span> <span class="token operator">:</span> <span class="token string">"Elasticsearch 教程"</span><span class="token punctuation">,</span>    <span class="token property">"description"</span> <span class="token operator">:</span> <span class="token string">"Elasticsearch 是一个搜索引擎"</span><span class="token punctuation">,</span>    <span class="token property">"by"</span> <span class="token operator">:</span> <span class="token string">"Ruby"</span><span class="token punctuation">,</span>    <span class="token property">"url"</span> <span class="token operator">:</span> <span class="token string">"https://www.elastic.co/cn/"</span><span class="token punctuation">,</span>    <span class="token property">"tags"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>        <span class="token string">"elasticearch"</span><span class="token punctuation">,</span>        <span class="token string">"database"</span><span class="token punctuation">,</span>        <span class="token string">"NoSQL"</span>    <span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token property">"likes"</span> <span class="token operator">:</span> <span class="token number">100.0</span><span class="token punctuation">&#125;</span><span class="token comment">/* 3 */</span><span class="token punctuation">&#123;</span>    <span class="token property">"title"</span> <span class="token operator">:</span> <span class="token string">"Redis 教程"</span><span class="token punctuation">,</span>    <span class="token property">"description"</span> <span class="token operator">:</span> <span class="token string">"Redis 是一个key-value数据库"</span><span class="token punctuation">,</span>    <span class="token property">"by"</span> <span class="token operator">:</span> <span class="token string">"Andy"</span><span class="token punctuation">,</span>    <span class="token property">"url"</span> <span class="token operator">:</span> <span class="token string">"https://redis.io/"</span><span class="token punctuation">,</span>    <span class="token property">"tags"</span> <span class="token operator">:</span> <span class="token punctuation">[</span>        <span class="token string">"redis"</span><span class="token punctuation">,</span>        <span class="token string">"database"</span><span class="token punctuation">,</span>        <span class="token string">"NoSQL"</span>    <span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token property">"likes"</span> <span class="token operator">:</span> <span class="token number">150.0</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">db.article.find()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206160118.jpg"></p><ul><li>MongoDB中的条件操作符，通过与SQL语句的对比来了解下；</li></ul><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206160308.jpg"></p><ul><li>条件查询，查询title为<code>MongoDB 教程</code>的所有文档；</li></ul><pre class="line-numbers language-none"><code class="language-none">db.article.find(&#123;&#39;title&#39;:&#39;MongoDB 教程&#39;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>条件查询，查询likes大于50的所有文档；</li></ul><pre class="line-numbers language-none"><code class="language-none">db.article.find(&#123;&#39;likes&#39;:&#123;$gt:50&#125;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>ND条件可以通过在<code>find()</code>方法传入多个键，以逗号隔开来实现，例如查询title为<code>MongoDB 教程</code>并且by为<code>Andy</code>的所有文档；</p><pre class="line-numbers language-none"><code class="language-none">db.article.find(&#123;&#39;title&#39;:&#39;MongoDB 教程&#39;,&#39;by&#39;:&#39;Andy&#39;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>OR条件可以通过使用<code>$or</code>操作符实现，例如查询title为<code>Redis 教程</code>或<code>MongoDB 教程</code>的所有文档；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;$or:[&#123;&#39;title&#39;:&#39;Redis 教程&#39;&#125;,&#123;&#39;title&#39;:&#39;MongoDB 教程&#39;&#125;]&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>AND 和 OR条件的联合使用，例如查询likes大于50，并且title为<code>Redis 教程</code>或者<code>&quot;MongoDB 教程</code>的所有文档。</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;&#39;likes&#39;:&#123;$gt:50&#125;,$or:[&#123;&quot;title&quot;: &quot;Redis 教程&quot;&#125;,&#123;&quot;title&quot;: &quot;MongoDB 教程&quot;&#125;]&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h2><h3 id="Limit与Skip操作"><a href="#Limit与Skip操作" class="headerlink" title="Limit与Skip操作"></a>Limit与Skip操作</h3><pre class="line-numbers language-none"><code class="language-none">db.collection.find().limit(NUMBER)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>只查询article集合中的2条数据；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find().limit(2)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>跳过指定数量的文档来读取，可以使用<code>skip()</code>方法，语法如下；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.find().limit(NUMBER).skip(NUMBER)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>从第二条开始，查询article集合中的2条数据；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find().limit(2).skip(1)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul><li>在MongoDB中使用<code>sort()</code>方法对数据进行排序，<code>sort()</code>方法通过参数来指定排序的字段，并使用1和-1来指定排序方式，1为升序，-1为降序；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.find().sort(&#123;KEY:1&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>按article集合中文档的likes字段降序排列；</li></ul><pre class="line-numbers language-none"><code class="language-none">db.article.find().sort(&#123;KEY:-1&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul><li>索引通常能够极大的提高查询的效率，如果没有索引，MongoDB在读取数据时必须扫描集合中的每个文件并选取那些符合查询条件的记录。</li><li>MongoDB使用<code>createIndex()</code>方法来创建索引，语法如下；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.collection.createIndex(keys, options)# background：建索引过程会阻塞其它数据库操作，设置为true表示后台创建，默认为false# unique：设置为true表示创建唯一索引# name：指定索引名称，如果没有指定会自动生成<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><ul><li>给title和description字段创建索引，1表示升序索引，-1表示降序索引，指定以后台方式创建；</li></ul><pre class="line-numbers language-none"><code class="language-none">db.article.createIndex(&#123;&quot;title&quot;:1,&quot;description&quot;:-1&#125;,&#123;background:true&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>查看article集合中已经创建的索引；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.getIndexs()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/* 1 */</span><span class="token punctuation">[</span>    <span class="token punctuation">&#123;</span>        <span class="token string">"v"</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>        <span class="token string">"key"</span> <span class="token operator">:</span> <span class="token punctuation">&#123;</span>            <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token number">1</span>        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>        <span class="token string">"name"</span> <span class="token operator">:</span> <span class="token string">"_id_"</span><span class="token punctuation">,</span>        <span class="token string">"ns"</span> <span class="token operator">:</span> <span class="token string">"test.article"</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>    <span class="token punctuation">&#123;</span>        <span class="token string">"v"</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>        <span class="token string">"key"</span> <span class="token operator">:</span> <span class="token punctuation">&#123;</span>            <span class="token string">"title"</span> <span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>            <span class="token string">"description"</span> <span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1.0</span>        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>        <span class="token string">"name"</span> <span class="token operator">:</span> <span class="token string">"title_1_description_-1"</span><span class="token punctuation">,</span>        <span class="token string">"ns"</span> <span class="token operator">:</span> <span class="token string">"test.article"</span><span class="token punctuation">,</span>        <span class="token string">"background"</span> <span class="token operator">:</span> <span class="token boolean">true</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h3><ul><li>MongoDB中的聚合使用<code>aggregate()</code>方法，类似于SQL中的group by语句，语法如下；</li></ul><pre class="line-numbers language-none"><code class="language-none">db.collection.aggregate(AGGREGATE_OPERATION)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>聚合中常用操作符如下；</li></ul><p><img src="D:\my_notebook\typora笔记图片统一管理处\QQ截图20211206163848.jpg"></p><ul><li>根据by字段聚合文档并计算文档数量，类似与SQL中的count()函数；</li></ul><pre class="line-numbers language-none"><code class="language-none">db.article.aggregate([&#123;$group : &#123;_id : &quot;$by&quot;, sum_count : &#123;$sum : 1&#125;&#125;&#125;])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* 1 */</span><span class="token punctuation">&#123;</span>    <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token string">"Andy"</span><span class="token punctuation">,</span>    <span class="token string">"sum_count"</span> <span class="token operator">:</span> <span class="token number">2.0</span><span class="token punctuation">&#125;</span><span class="token comment">/* 2 */</span><span class="token punctuation">&#123;</span>    <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token string">"Ruby"</span><span class="token punctuation">,</span>    <span class="token string">"sum_count"</span> <span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>根据by字段聚合文档并计算likes字段的平局值，类似与SQL中的avg()语句；</li></ul><pre class="line-numbers language-none"><code class="language-none">db.article.aggregate([&#123;$group : &#123;_id : &quot;$by&quot;, avg_likes : &#123;$avg : &quot;$likes&quot;&#125;&#125;&#125;])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* 1 */</span><span class="token punctuation">&#123;</span>    <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token string">"Andy"</span><span class="token punctuation">,</span>    <span class="token string">"avg_likes"</span> <span class="token operator">:</span> <span class="token number">100.0</span><span class="token punctuation">&#125;</span><span class="token comment">/* 2 */</span><span class="token punctuation">&#123;</span>    <span class="token string">"_id"</span> <span class="token operator">:</span> <span class="token string">"Ruby"</span><span class="token punctuation">,</span>    <span class="token string">"avg_likes"</span> <span class="token operator">:</span> <span class="token number">100.0</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><ul><li><p>MongoDB使用<code>$regex</code>操作符来设置匹配字符串的正则表达式，可以用来模糊查询，类似于SQL中的like操作；</p></li><li><p>例如查询title中包含<code>教程</code>的文档；</p></li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;title:&#123;$regex:&quot;教程&quot;&#125;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>不区分大小写的模糊查询，使用<code>$options</code>操作符；</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db.article.find(&#123;title:&#123;$regex:&quot;elasticsearch&quot;,$options:&quot;$i&quot;&#125;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="结合SpringBoot使用"><a href="#结合SpringBoot使用" class="headerlink" title="结合SpringBoot使用"></a>结合SpringBoot使用</h2><p>具体参考：mall整合MongoDB实现文档操作</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> MongoDB </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NoSql </tag>
+            
+            <tag> 非关系型数据库 </tag>
+            
+            <tag> MongoDB命令行操作 </tag>
+            
+            <tag> Robomongo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typora使用技巧——将图片自动上传到服务器上</title>
+      <link href="/2021/12/06/hexo%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E4%BB%BF%E4%BF%A1%E7%BA%B8%E4%BD%9C%E4%B8%9A%E7%BA%B8%E6%A0%B7%E5%BC%8F%E4%BF%AE%E9%A5%B0/"/>
+      <url>/2021/12/06/hexo%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E4%BB%BF%E4%BF%A1%E7%BA%B8%E4%BD%9C%E4%B8%9A%E7%BA%B8%E6%A0%B7%E5%BC%8F%E4%BF%AE%E9%A5%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="hexo博客页面仿信纸作业纸样式修饰"><a href="#hexo博客页面仿信纸作业纸样式修饰" class="headerlink" title="hexo博客页面仿信纸作业纸样式修饰"></a>hexo博客页面仿信纸作业纸样式修饰</h1><blockquote><p>“ 前言: 本文是给Hexo博客增加随笔页面，并对页面仿信纸作业纸样式修饰，基于Matery主题，其他主题亦可参考。”</p></blockquote><p>至于为什么要写本文，是因为有一天，突然有了一个想法，想把以前初高中写的那些作文，整理一下，上传到博客网站，无论是对于风花雪月，对于以前的一些独特的世界观，那个时期独特的idea，想要通通记录下来。于是就酝酿出来本文了。</p><h3 id="实现效果展示"><a href="#实现效果展示" class="headerlink" title="实现效果展示"></a>实现效果展示</h3><p>首先，直接展示效果图：</p><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206093721.jpg"></p><h3 id="对页面进行仿信纸样式修饰"><a href="#对页面进行仿信纸样式修饰" class="headerlink" title="对页面进行仿信纸样式修饰"></a>对页面进行仿信纸样式修饰</h3><p>此部分均为css代码，直接贴在<code>post-detail.ejs</code>文件里即可。</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">&lt;style>    .ititle</span> <span class="token punctuation">&#123;</span>        <span class="token property">margin</span><span class="token punctuation">:</span> 15px 0<span class="token punctuation">;</span>        <span class="token property">text-align</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span>        <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Architects Daughter'</span><span class="token punctuation">,</span> cursive<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.ipage</span> <span class="token punctuation">&#123;</span>        <span class="token property">line-height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>        <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>        <span class="token property">padding</span><span class="token punctuation">:</span> 15px 32px 29px<span class="token punctuation">;</span>        <span class="token property">background-color</span><span class="token punctuation">:</span> #f9f9f9<span class="token punctuation">;</span>        <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0px 2px 5px 0px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.26<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token property">-moz-border-radius-bottomleft</span><span class="token punctuation">:</span> 20px 500px<span class="token punctuation">;</span>        <span class="token property">-moz-border-radius-bottomright</span><span class="token punctuation">:</span> 500px 30px<span class="token punctuation">;</span>        <span class="token property">-moz-border-radius-topright</span><span class="token punctuation">:</span> 5px 100px<span class="token punctuation">;</span>         <span class="token property">-webkit-border-bottom-left-radius</span><span class="token punctuation">:</span> 20px 500px<span class="token punctuation">;</span>        <span class="token property">-webkit-border-bottom-right-radius</span><span class="token punctuation">:</span> 64px 10px<span class="token punctuation">;</span>        <span class="token property">-webkit-border-top-right-radius</span><span class="token punctuation">:</span> 5px 100px<span class="token punctuation">;</span>            <span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 20px 500px<span class="token punctuation">;</span>        <span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 64px 10px<span class="token punctuation">;</span>        <span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 5px 100px<span class="token punctuation">;</span>                   <span class="token property">-webkit-background-size</span><span class="token punctuation">:</span> 100% 30px<span class="token punctuation">;</span>        <span class="token property">-moz-box-shadow</span><span class="token punctuation">:</span> 0 2px 10px 1px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.2<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> 0 2px 10px 1px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.2<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token property">text-shadow</span><span class="token punctuation">:</span> 0 1px 0 #F6EF97<span class="token punctuation">;</span>        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token selector">.izhengwen</span> <span class="token punctuation">&#123;</span>    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>    <span class="token property">z-index</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span>    <span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">repeating-linear-gradient</span><span class="token punctuation">(</span>to bottom<span class="token punctuation">,</span> #f9f9f9<span class="token punctuation">,</span> #f9f9f9 31px<span class="token punctuation">,</span> #6BA2D8 1px<span class="token punctuation">,</span> #f9f9f9<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token property">background-size</span><span class="token punctuation">:</span> 100% 32px<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token selector">#articleContent p</span> <span class="token punctuation">&#123;</span>    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">&#125;</span><span class="token selector">.ititle</span> <span class="token punctuation">&#123;</span>    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Architects Daughter'</span><span class="token punctuation">,</span> cursive<span class="token punctuation">;</span>    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.45rem<span class="token important">!important</span><span class="token punctuation">;</span>    <span class="token property">padding</span><span class="token punctuation">:</span> 10px auto<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token selector">.izhengwen p</span> <span class="token punctuation">&#123;</span>    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>    <span class="token property">line-height</span><span class="token punctuation">:</span> 2.2rem<span class="token important">!important</span><span class="token punctuation">;</span>    <span class="token property">text-indent</span><span class="token punctuation">:</span> 2em<span class="token punctuation">;</span>    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Architects Daughter'</span><span class="token punctuation">,</span> cursive<span class="token important">!important</span><span class="token punctuation">;</span>    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.45rem<span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token selector">.ipage::before</span> <span class="token punctuation">&#123;</span>    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>    <span class="token property">top</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>    <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>    <span class="token property">right</span><span class="token punctuation">:</span> 52px<span class="token punctuation">;</span>    <span class="token property">z-index</span><span class="token punctuation">:</span> 4<span class="token punctuation">;</span>    <span class="token property">width</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>    <span class="token property">border-left</span><span class="token punctuation">:</span> 1px solid #fca1a1<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token selector">.izhengwen p:nth-child(odd):before</span> <span class="token punctuation">&#123;</span>    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>    <span class="token property">left</span><span class="token punctuation">:</span> -16px<span class="token punctuation">;</span>    <span class="token property">z-index</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span>    <span class="token property">width</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>    <span class="token property">height</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>    <span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>    <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>    <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0px 2px 5px 0px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.26<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token selector">.ipage:after</span> <span class="token punctuation">&#123;</span>    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>    <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>    <span class="token property">left</span><span class="token punctuation">:</span> 52px<span class="token punctuation">;</span>    <span class="token property">z-index</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span>    <span class="token property">width</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>    <span class="token property">border-left</span><span class="token punctuation">:</span> 4px double #fca1a1<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token selector">.ipage p</span> <span class="token punctuation">&#123;</span>    <span class="token property">padding</span><span class="token punctuation">:</span> 0 2em<span class="token punctuation">;</span>    <span class="token property">color</span><span class="token punctuation">:</span> #333<span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token selector">body.dark .ipage</span> <span class="token punctuation">&#123;</span>    <span class="token property">opacity</span><span class="token punctuation">:</span> 0.85<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token comment">/*小屏幕下(手机类)的样式*/</span><span class="token atrule"><span class="token rule">@media</span> <span class="token keyword">only</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">)</span></span> <span class="token punctuation">&#123;</span>    <span class="token selector">.ipage</span> <span class="token punctuation">&#123;</span>        <span class="token property">padding</span><span class="token punctuation">:</span> 15px 23px 29px<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.ipage:after</span> <span class="token punctuation">&#123;</span>        <span class="token property">left</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token selector">.ipage::before</span> <span class="token punctuation">&#123;</span>        <span class="token property">right</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>        <span class="token punctuation">&#125;</span>    <span class="token selector">.ipage p</span> <span class="token punctuation">&#123;</span>        <span class="token property">padding</span><span class="token punctuation">:</span> 0 0.9em<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>&lt;/style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="新建一个md文件作为随笔文章页"><a href="#新建一个md文件作为随笔文章页" class="headerlink" title="新建一个md文件作为随笔文章页"></a>新建一个md文件作为随笔文章页</h3><p>这里我直接给出一个模板随笔文章页，可直接粘贴，其中以下div格式是固定的，不可修改，但可以随意自定义内容文字。</p><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ipage<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ititle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>izhengwen<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>正文<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>正文<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>以下是我自拟的一个随笔模板页md文件源码，你可以直接粘贴做修改</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">--</span><span class="token operator">-</span>title<span class="token operator">:</span> 啊啊啊这是随笔文章模板abbrlink<span class="token operator">:</span> <span class="token string">'essay-demo'</span>tags<span class="token operator">:</span>  <span class="token operator">-</span> 随笔categories<span class="token operator">:</span> 随笔mathjax<span class="token operator">:</span> <span class="token boolean">true</span><span class="token operator">--</span><span class="token operator">-</span>### 这是博主的随笔板块，后续会更新文章，目前弄好了模板格式<span class="token operator">~</span><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ipage"</span><span class="token operator">></span> <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ititle"</span><span class="token operator">></span>节选自《你若安好便是晴天》<span class="token operator">-</span> 前言<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"izhengwen"</span><span class="token operator">></span>    <span class="token generics"><span class="token punctuation">&lt;</span>p<span class="token punctuation">></span></span>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。    <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>最后，运行<code>hexo s</code>查看效果，进行调试。 </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随笔模板</title>
+      <link href="/2021/12/06/essay-demo/"/>
+      <url>/2021/12/06/essay-demo/</url>
+      
+        <content type="html"><![CDATA[<h3 id="这是博主的随笔模板"><a href="#这是博主的随笔模板" class="headerlink" title="这是博主的随笔模板!"></a>这是博主的随笔模板!</h3><div class="ipage"> <div class="ititle">节选自《你若安好便是晴天》- 前言</div>  <div class="izhengwen">    <p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。</p>  </div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typora使用技巧——将图片自动上传到服务器上</title>
+      <link href="/2021/12/05/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E2%80%94%E2%80%94%E5%B0%86%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/"/>
+      <url>/2021/12/05/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E2%80%94%E2%80%94%E5%B0%86%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Typora使用技巧——将图片自动上传到服务器上"><a href="#Typora使用技巧——将图片自动上传到服务器上" class="headerlink" title="Typora使用技巧——将图片自动上传到服务器上"></a>Typora使用技巧——将图片自动上传到服务器上</h1><h1 id="何为图床？"><a href="#何为图床？" class="headerlink" title="何为图床？"></a>何为图床？</h1><blockquote><p>说白了，就是类似百度网盘功能，放东西的，只不过这个东西都是图片！</p></blockquote><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205225519.jpg"></p><h1 id="PicGo-又是啥？"><a href="#PicGo-又是啥？" class="headerlink" title="PicGo 又是啥？"></a>PicGo 又是啥？</h1><p>PicGo是一种图床工具！就是自动把本地图片转换成链接的一款工具，网络上有很多图床工具，就目前使用种类而言，PicGo 算得上一款比较优秀的图床工具。它是一款用 <code>Electron-vue</code> 开发的软件。</p><p>可以支持微博，七牛云，腾讯云COS，又拍云，GitHub，阿里云OSS，SM.MS，imgur 等8种常用图床，功能强大，简单易用</p><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205230208.jpg"></p><h1 id="Typora建立PicGo图床"><a href="#Typora建立PicGo图床" class="headerlink" title="Typora建立PicGo图床"></a>Typora建立PicGo图床</h1><blockquote><p>基于<code>Typora</code>+<code>Aliyun Oss对象存储</code>+<code>Picgo </code></p></blockquote><h2 id="1、阿里云图床"><a href="#1、阿里云图床" class="headerlink" title="1、阿里云图床"></a>1、阿里云图床</h2><p>首先在阿里云里搜索OSS，并开通服务。</p><p><strong>创建Bucket</strong></p><p>进入对象存储OSS，点击左侧栏Bucket 列表，创建Bucket 注意：读写权限选择<strong>公共读</strong>，不然PicGo无法上传图片。 </p><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205220521.jpg"></p><p>点击自己用户头像，创建<code>AccessKey</code>,保存相应的<code>AccessKey ID</code>和<code>Access Key Secret</code>信息。</p><h2 id="2、安装PicGo"><a href="#2、安装PicGo" class="headerlink" title="2、安装PicGo"></a>2、安装PicGo</h2><blockquote><p>下载网址：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p></blockquote><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205221200.jpg"></p><p>然后安装。<strong>将PicGo的数据加入环境变量中。</strong></p><p>此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;双击Path-&gt;添加</p><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205222326.jpg"></p><h2 id="3、图床环境配置"><a href="#3、图床环境配置" class="headerlink" title="3、图床环境配置"></a>3、图床环境配置</h2><p>打开安装好的图床,进行配置，即可！</p><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205224027.jpg"></p><h2 id="4、Typora设置"><a href="#4、Typora设置" class="headerlink" title="4、Typora设置"></a>4、Typora设置</h2><p>设置自动上传到OSS阿里云，并且保存到我的笔记图片统一管理处（图片现在还是在本地）</p><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205224839-16387159733621.jpg"></p><p>手动上传</p><p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205225207.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Typora </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> oss </tag>
+            
+            <tag> picGo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
