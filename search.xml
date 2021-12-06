@@ -36,7 +36,8 @@
         <category>Typora</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
+        <tag>oss</tag>
+        <tag>picGo</tag>
       </tags>
   </entry>
   <entry>
@@ -156,7 +157,7 @@
       </tags>
   </entry>
   <entry>
-    <title>了解这些软件设计思想，你的思维至少上升一个段位！</title>
+    <title>关于给Hexo文章分类页面按钮仿书本样式美化</title>
     <url>/2021/12/07/%E5%85%B3%E4%BA%8E%E7%BB%99hexo%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E6%8C%89%E9%92%AE%E4%BB%BF%E4%B9%A6%E6%9C%AC%E6%A0%B7%E5%BC%8F%E7%BE%8E%E5%8C%96/</url>
     <content><![CDATA[<h1 id="关于给Hexo文章分类页面按钮仿书本样式美化"><a href="#关于给Hexo文章分类页面按钮仿书本样式美化" class="headerlink" title="关于给Hexo文章分类页面按钮仿书本样式美化"></a>关于给Hexo文章分类页面按钮仿书本样式美化</h1><blockquote>
 <p>前言：最近成迷于美化Hexo博客样式，发现了这个超好看的样式，美化了一下，基于Matery主题设置的，其他主题原理也一样可参考。</p>
@@ -309,6 +310,22 @@
       <tags>
         <tag>hexo</tag>
         <tag>matery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随笔模板</title>
+    <url>/2021/12/06/essay-demo/</url>
+    <content><![CDATA[<h3 id="这是博主的随笔模板"><a href="#这是博主的随笔模板" class="headerlink" title="这是博主的随笔模板!"></a>这是博主的随笔模板!</h3><div class="ipage">
+ <div class="ititle">节选自《你若安好便是晴天》- 前言</div>
+  <div class="izhengwen">
+    <p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。</p>
+  </div>
+</div>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
 </search>
