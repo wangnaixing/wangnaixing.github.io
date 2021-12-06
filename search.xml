@@ -17,12 +17,7 @@
 <p><strong>创建Bucket</strong></p>
 <p>进入对象存储OSS，点击左侧栏Bucket 列表，创建Bucket 注意：读写权限选择<strong>公共读</strong>，不然PicGo无法上传图片。 </p>
 <p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205220521.jpg"></p>
-<p>点击头像，创建<code>AccessKey</code>,保存相应的<code>AccessKey ID</code>和<code>Access Key Secret</code>信息。</p>
-<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token attr-name">AccessKey</span> <span class="token attr-value">ID：LTAI5t8M5g7Fb4jKKyG7hcW2</span>
-<span class="token attr-name">AccessKey</span> <span class="token attr-value">Secret：pKp1qfgwTObEBFeBpizTK3urK74RuH</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
+<p>点击自己用户头像，创建<code>AccessKey</code>,保存相应的<code>AccessKey ID</code>和<code>Access Key Secret</code>信息。</p>
 <h2 id="2、安装PicGo"><a href="#2、安装PicGo" class="headerlink" title="2、安装PicGo"></a>2、安装PicGo</h2><blockquote>
 <p>下载网址：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p>
 </blockquote>
