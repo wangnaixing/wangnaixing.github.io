@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于给Hexo文章分类页面按钮仿书本样式美化, wnx">
-    <meta name="description" content="這輩子就是一個個未竟之志補起來的，你們飄得起來嗎?">
+    <meta name="keywords" content="不推荐使用@Autowired进行Field注入的原因, wnx">
+    <meta name="description" content="愿中国青年都能摆脱冷气，只是向上走，不必听自爆自弃者流的话，能做事的做事，能发声的发声。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>关于给Hexo文章分类页面按钮仿书本样式美化 | wnx</title>
+    <title>不推荐使用@Autowired进行Field注入的原因 | wnx</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -266,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/wallhaven-k7jk8q.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/wallhaven-lqrw2r.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">关于给Hexo文章分类页面按钮仿书本样式美化</h1>
+                    <h1 class="description center-align post-title">不推荐使用@Autowired进行Field注入的原因</h1>
                 </div>
             </div>
         </div>
@@ -398,12 +398,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/Autowired/">
+                                <span class="chip bg-color">Autowired</span>
                             </a>
                         
-                            <a href="/tags/matery/">
-                                <span class="chip bg-color">matery</span>
+                            <a href="/tags/Resource/">
+                                <span class="chip bg-color">Resource</span>
+                            </a>
+                        
+                            <a href="/tags/DI/">
+                                <span class="chip bg-color">DI</span>
+                            </a>
+                        
+                            <a href="/tags/IDEA%E8%AD%A6%E5%91%8A/">
+                                <span class="chip bg-color">IDEA警告</span>
                             </a>
                         
                     </div>
@@ -414,8 +422,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hexo/" class="post-category">
-                                hexo
+                            <a href="/categories/Spring/" class="post-category">
+                                Spring
                             </a>
                         
                     </div>
@@ -451,150 +459,38 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="关于给Hexo文章分类页面按钮仿书本样式美化"><a href="#关于给Hexo文章分类页面按钮仿书本样式美化" class="headerlink" title="关于给Hexo文章分类页面按钮仿书本样式美化"></a>关于给Hexo文章分类页面按钮仿书本样式美化</h1><blockquote>
-<p>前言：最近成迷于美化Hexo博客样式，发现了这个超好看的样式，美化了一下，基于Matery主题设置的，其他主题原理也一样可参考。</p>
-</blockquote>
-<p>废话不多说，先上图：</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211206083338.jpg"></p>
-<p>特点: 都是<code>div+css</code>美化效果，所以没啥难度，可以直接复制我以下的代码，或者做修改都可。</p>
-<h3 id="引入html代码"><a href="#引入html代码" class="headerlink" title="引入html代码"></a>引入<code>html</code>代码</h3><ul>
-<li>1、首先，找到位置为<code>/layout/category-cloud.ejs</code>的文件，后面的html和css代码都放在此<code>category-cloud.ejs</code>文件即可。</li>
-<li>2、然后，定位到<code>href=&quot;&lt;%- url_for(category.path) %&gt;&quot;</code>的a标签位置：</li>
-</ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 定位到该位置 <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%- url_for(category.path) %>"</span> title<span class="token operator">=</span><span class="token string">"&lt;%- category.name %>: &lt;%- category.length %>"</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<ul>
-<li>3、直接将该a标签里面的内容全部替换为以下代码：</li>
-</ul>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>moleskine-wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>moleskine-notebook<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chip notebook-cover center-align waves-effect waves-light
-                &lt;% if (isCategory &amp;&amp; category.name == page.category) &#123; %> chip-active &lt;% &#125; else &#123; %> chip-default &lt;% &#125; %><span class="token punctuation">"</span></span>
-                        <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> &lt;%- color %><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>                                               
-                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>notebook-skin
-                        &lt;% if (isCategory &amp;&amp; category.name == page.category) &#123; %> chip-active &lt;% &#125; else &#123; %> chip-default &lt;% &#125; %><span class="token punctuation">"</span></span>
-                        <span class="token punctuation">></span></span>&lt;%- category.name %>                     
-                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>notebook-page dotted<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="设置css样式"><a href="#设置css样式" class="headerlink" title="设置css样式"></a>设置css样式</h3><p>这部分同样放在此<code>category-cloud.ejs</code>文件即可。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">&lt;style>
-    <span class="token comment">/* 文章分类书本样式 */</span>
-    <span class="token selector">.chip-container .tag-chips</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-        <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
-        <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip-container .tag-chips a</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">margin</span><span class="token punctuation">:</span> 0 7px 10px<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip-container .chip</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% / 4<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">min-width</span><span class="token punctuation">:</span> 10em<span class="token punctuation">;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-        <span class="token property">transition</span><span class="token punctuation">:</span> .5s linear<span class="token punctuation">;</span>
-        <span class="token property">padding</span><span class="token punctuation">:</span> 19px 0<span class="token punctuation">;</span>
-        <span class="token property">line-height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 990<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 15px 15px 5px<span class="token punctuation">;</span>
-        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left center 0<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip-container .notebook-cover::before</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% + 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">top</span><span class="token punctuation">:</span> -1px<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
-        <span class="token property">right</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
-        <span class="token property">transition</span><span class="token punctuation">:</span> 2s ease<span class="token punctuation">;</span>
-        <span class="token comment">/* background: linear-gradient(to right,#9c2e2b 0,#cc4b48 12%,#9c2e2b 25%,#cc4b48 37%,#9c2e2b 50%,#cc4b48 62%,#9c2e2b 75%,#cc4b48 87%,#9c2e2b 100%); */</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span>#1e606e 0<span class="token punctuation">,</span>#2e95aa 12%<span class="token punctuation">,</span>#1e606e 25%<span class="token punctuation">,</span>#2e95aa 37%<span class="token punctuation">,</span>#1e606e 50%<span class="token punctuation">,</span>#2e95aa 62%<span class="token punctuation">,</span>#1e606e 75%<span class="token punctuation">,</span>#2e95aa 87%<span class="token punctuation">,</span>#1e606e 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip .notebook-skin</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> #e8e8e0<span class="token punctuation">;</span>
-        <span class="token property">margin-top</span><span class="token punctuation">:</span> 42px<span class="token punctuation">;</span>
-        <span class="token property">padding</span><span class="token punctuation">:</span> 10px 32px 64px 10px<span class="token punctuation">;</span>
-        <span class="token property">font-size</span><span class="token punctuation">:</span> 19px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span>
-        <span class="token property">color</span><span class="token punctuation">:</span> #222<span class="token punctuation">;</span>
-        <span class="token property">text-align</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
-        <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 1px 1px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip .notebook-skin:before</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
-        <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-        <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> #cddc39<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.notebook-cover</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> #cc4b48<span class="token punctuation">;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 15px 15px 5px<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span>
-        <span class="token property">transition</span><span class="token punctuation">:</span> .5s linear<span class="token punctuation">;</span>
-        <span class="token property">transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
-        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left center 0<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-    <span class="token selector">.moleskine-wrapper</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% / 4<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">min-width</span><span class="token punctuation">:</span> 10em<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.moleskine-notebook:hover .notebook-cover</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>-50deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 99<span class="token punctuation">;</span>
-        <span class="token property">box-shadow</span><span class="token punctuation">:</span> 20px 10px 50px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.moleskine-notebook</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-        <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
-        <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>
-        <span class="token property">transition</span><span class="token punctuation">:</span> .5s linear<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 15px 15px 5px<span class="token punctuation">;</span>
-        <span class="token property">transform-origin</span><span class="token punctuation">:</span> left center 0<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.moleskine-notebook:hover</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>-10deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.notebook-page.dotted</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom<span class="token punctuation">,</span>#fbfae8 9px<span class="token punctuation">,</span>#e4e4e4 1px<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token property">background-size</span><span class="token punctuation">:</span> 100% 10px<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.chip-container .chip:hover</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">background</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token selector">.notebook-page</span> <span class="token punctuation">&#123;</span>
-        <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>
-        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-        <span class="token property">top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> #fbfae8<span class="token punctuation">;</span>
-        <span class="token property">z-index</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-        <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px 16px 16px 5px<span class="token punctuation">;</span>
-        <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-&lt;/style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <h1 id="不推荐使用-Autowired进行Field注入的原因"><a href="#不推荐使用-Autowired进行Field注入的原因" class="headerlink" title="不推荐使用@Autowired进行Field注入的原因"></a>不推荐使用@Autowired进行Field注入的原因</h1><p>很久以前在用IDEA开发的时候就注意到过一个提示，在字段上使用Spring的依赖注入注解<code>@Autowired</code>后会出现如下警告</p>
 <blockquote>
-<p>至此，结束。很简单，但超好看。</p>
+<p>Field injection is not recommended (字段注入是不被推荐的)</p>
 </blockquote>
+<p>但是使用<code>@Resource</code>却不会出现此提示!网上文章大部分都是介绍两者的区别，没有提到为什么，当时想了好久想出了可能的原因，不过时间过了这么久又有点忘记了，今天来总结一下</p>
+<h2 id="Spring常见的DI方式"><a href="#Spring常见的DI方式" class="headerlink" title="Spring常见的DI方式"></a>Spring常见的DI方式</h2><ul>
+<li><strong>构造器注入</strong>：利用构造方法的参数注入依赖</li>
+<li><strong>Setter注入</strong>：调用Setter的方法注入依赖</li>
+<li><strong>字段注入</strong>：在字段上使用@Autowired/Resource注解</li>
+</ul>
+<h3 id="Autowired-VS-Resource"><a href="#Autowired-VS-Resource" class="headerlink" title="@Autowired VS @Resource"></a>@Autowired VS @Resource</h3><p>事实上，他们的基本功能都是通过注解实现<strong>依赖注入</strong>，只不过<code>@Autowired</code>是<code>Spring</code>定义的，而<code>@Resource</code>是<code>JSR-250</code>定义的。大致功能基本相同，但是还有一些细节不同：</p>
+<ul>
+<li><strong>依赖识别方式</strong>：@Autowired默认是<strong>byType</strong>可以使用@Qualifier指定Name，@Resource<strong>默认ByName</strong>如果<strong>找不到则ByType</strong></li>
+<li><strong>适用对象</strong>：@Autowired可以对<strong>构造器、方法、参数、字段</strong>使用，@Resource只能对<strong>方法、字段</strong>使用</li>
+<li><strong>提供方</strong>：@Autowired是<strong>Spring</strong>提供的，@Resource是<strong>JSR-250</strong>提供的</li>
+</ul>
+<h2 id="各种DI方式的优缺点"><a href="#各种DI方式的优缺点" class="headerlink" title="各种DI方式的优缺点"></a>各种DI方式的优缺点</h2><p>参考Spring官方文档，建议了如下的使用场景：</p>
+<ul>
+<li><strong>构造器注入</strong>：<strong>强依赖性</strong>（即必须使用此依赖），<strong>不变性</strong>（各依赖不会经常变动）</li>
+<li><strong>Setter注入</strong>：<strong>可选</strong>（没有此依赖也可以工作），<strong>可变</strong>（依赖会经常变动）</li>
+<li><strong>Field注入</strong>：大多数情况下尽量<strong>少使用</strong>字段注入，一定要使用的话，**@Resource相对@Autowired<strong>对IoC容器的</strong>耦合更低**</li>
+</ul>
+<h2 id="Field注入的缺点"><a href="#Field注入的缺点" class="headerlink" title="Field注入的缺点"></a>Field注入的缺点</h2><ul>
+<li><strong>不能像构造器那样注入不可变的对象</strong></li>
+<li><strong>依赖对外部不可见</strong>，外界可以看到构造器和setter，但无法看到私有字段，自然无法了解所需依赖</li>
+<li>会导致<strong>组件与IoC容器紧耦合</strong>（这是最重要的原因，离开了IoC容器去使用组件，在注入依赖时就会十分困难）</li>
+<li>导致<strong>单元测试也必须使用IoC容器</strong>，原因同上</li>
+<li><strong>依赖过多时不够明显</strong>，比如我需要10个依赖，用构造器注入就会显得庞大，这时候应该考虑一下此组件是不是<strong>违反了单一职责原则</strong></li>
+</ul>
+<h3 id="为什么IDEA只对-Autowired警告"><a href="#为什么IDEA只对-Autowired警告" class="headerlink" title="为什么IDEA只对@Autowired警告"></a>为什么IDEA只对@Autowired警告</h3><p>Field注入虽然有很多缺点，但它的好处也不可忽略：那就是<strong>太方便了</strong>。使用构造器或者setter注入需要写更多业务无关的代码，十分麻烦，而字段注入大幅简化了它们。并且绝大多数情况下业务代码和框架就是强绑定的，完全松耦合只是一件理想上的事，牺牲了敏捷度去过度追求松耦合反而得不偿失。</p>
+<p>那么问题来了，为什么IDEA只对@Autowired警告，却对@Resource视而不见呢？</p>
+<p><strong>个人认为</strong>，就像我们前面提到过的：**@Autowired<strong>是</strong>Spring<strong>提供的，它是</strong>特定IoC提供的特定注解<strong>，这就导致了应用与框架的</strong>强绑定<strong>，一旦换用了其他的IoC框架，是</strong>不能够支持注入<strong>的。而</strong>@Resource<strong>是</strong>JSR-250<strong>提供的，它是</strong>Java标准**，我们使用的IoC容器应当去兼容它，这样即使更换容器，也可以正常工作。</p>
 
                 
             </div>
@@ -621,7 +517,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangnaixing.github.io/2021/12/07/%E5%85%B3%E4%BA%8E%E7%BB%99hexo%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E6%8C%89%E9%92%AE%E4%BB%BF%E4%B9%A6%E6%9C%AC%E6%A0%B7%E5%BC%8F%E7%BE%8E%E5%8C%96/">https://wangnaixing.github.io/2021/12/07/%E5%85%B3%E4%BA%8E%E7%BB%99hexo%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E6%8C%89%E9%92%AE%E4%BB%BF%E4%B9%A6%E6%9C%AC%E6%A0%B7%E5%BC%8F%E7%BE%8E%E5%8C%96/</a>
+                    <a href="https://wangnaixing.github.io/2021/12/07/%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8@Autowired%E8%BF%9B%E8%A1%8CField%E6%B3%A8%E5%85%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/">https://wangnaixing.github.io/2021/12/07/%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8@Autowired%E8%BF%9B%E8%A1%8CField%E6%B3%A8%E5%85%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -659,12 +555,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/Autowired/">
+                                    <span class="chip bg-color">Autowired</span>
                                 </a>
                             
-                                <a href="/tags/matery/">
-                                    <span class="chip bg-color">matery</span>
+                                <a href="/tags/Resource/">
+                                    <span class="chip bg-color">Resource</span>
+                                </a>
+                            
+                                <a href="/tags/DI/">
+                                    <span class="chip bg-color">DI</span>
+                                </a>
+                            
+                                <a href="/tags/IDEA%E8%AD%A6%E5%91%8A/">
+                                    <span class="chip bg-color">IDEA警告</span>
                                 </a>
                             
                         </div>
@@ -836,9 +740,71 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/12/07/%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8@Autowired%E8%BF%9B%E8%A1%8CField%E6%B3%A8%E5%85%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/">
+                    <div class="card-image">
+                        
+                        <img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/wallhaven-lqrw2r.jpg" class="responsive-img" alt="不推荐使用@Autowired进行Field注入的原因">
+                        
+                        <span class="card-title">不推荐使用@Autowired进行Field注入的原因</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            愿中国青年都能摆脱冷气，只是向上走，不必听自爆自弃者流的话，能做事的做事，能发声的发声。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Autowired/">
+                        <span class="chip bg-color">Autowired</span>
+                    </a>
+                    
+                    <a href="/tags/Resource/">
+                        <span class="chip bg-color">Resource</span>
+                    </a>
+                    
+                    <a href="/tags/DI/">
+                        <span class="chip bg-color">DI</span>
+                    </a>
+                    
+                    <a href="/tags/IDEA%E8%AD%A6%E5%91%8A/">
+                        <span class="chip bg-color">IDEA警告</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/12/07/%E7%9C%8B%E5%AE%8C%E8%BF%99%E7%AF%87%E8%BF%98%E4%B8%8D%E4%BA%86%E8%A7%A3Nginx%EF%BC%8C%E9%82%A3%E6%88%91%E5%B0%B1%E5%93%AD%E4%BA%86%EF%BC%81/">
                     <div class="card-image">
@@ -855,9 +821,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -891,58 +857,6 @@
                     
                     <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
                         <span class="chip bg-color">负载均衡</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/12/07/%E4%BA%86%E8%A7%A3%E8%BF%99%E4%BA%9B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%8C%E4%BD%A0%E7%9A%84%E6%80%9D%E7%BB%B4%E8%87%B3%E5%B0%91%E4%B8%8A%E5%8D%87%E4%B8%80%E4%B8%AA%E6%AE%B5%E4%BD%8D%EF%BC%81/">
-                    <div class="card-image">
-                        
-                        <img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/wallhaven-q2oyll.jpg" class="responsive-img" alt="了解这些软件设计思想，你的思维至少上升一个段位！">
-                        
-                        <span class="card-title">了解这些软件设计思想，你的思维至少上升一个段位！</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            我们是一小撮应不会记载的小人物和散兵游勇，走着一条地图上没有的路穿过封锁线，追寻主力的尾巴！
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%9E%B6%E6%9E%84%E5%B8%88/" class="post-category">
-                                    架构师
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">设计模式</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
                     </a>
                     
                 </div>
