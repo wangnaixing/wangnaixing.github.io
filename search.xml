@@ -1,48 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Typora使用技巧——将图片自动上传到服务器上</title>
-    <url>/2021/12/05/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E2%80%94%E2%80%94%E5%B0%86%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</url>
-    <content><![CDATA[<h1 id="Typora使用技巧——将图片自动上传到服务器上"><a href="#Typora使用技巧——将图片自动上传到服务器上" class="headerlink" title="Typora使用技巧——将图片自动上传到服务器上"></a>Typora使用技巧——将图片自动上传到服务器上</h1><h1 id="何为图床？"><a href="#何为图床？" class="headerlink" title="何为图床？"></a>何为图床？</h1><blockquote>
-<p>说白了，就是类似百度网盘功能，放东西的，只不过这个东西都是图片！</p>
-</blockquote>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205225519.jpg"></p>
-<h1 id="PicGo-又是啥？"><a href="#PicGo-又是啥？" class="headerlink" title="PicGo 又是啥？"></a>PicGo 又是啥？</h1><p>PicGo是一种图床工具！就是自动把本地图片转换成链接的一款工具，网络上有很多图床工具，就目前使用种类而言，PicGo 算得上一款比较优秀的图床工具。它是一款用 <code>Electron-vue</code> 开发的软件。</p>
-<p>可以支持微博，七牛云，腾讯云COS，又拍云，GitHub，阿里云OSS，SM.MS，imgur 等8种常用图床，功能强大，简单易用</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205230208.jpg"></p>
-<h1 id="Typora建立PicGo图床"><a href="#Typora建立PicGo图床" class="headerlink" title="Typora建立PicGo图床"></a>Typora建立PicGo图床</h1><blockquote>
-<p>基于<code>Typora</code>+<code>Aliyun Oss对象存储</code>+<code>Picgo </code></p>
-</blockquote>
-<h2 id="1、阿里云图床"><a href="#1、阿里云图床" class="headerlink" title="1、阿里云图床"></a>1、阿里云图床</h2><p>首先在阿里云里搜索OSS，并开通服务。</p>
-<p><strong>创建Bucket</strong></p>
-<p>进入对象存储OSS，点击左侧栏Bucket 列表，创建Bucket 注意：读写权限选择<strong>公共读</strong>，不然PicGo无法上传图片。 </p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205220521.jpg"></p>
-<p>点击自己用户头像，创建<code>AccessKey</code>,保存相应的<code>AccessKey ID</code>和<code>Access Key Secret</code>信息。</p>
-<h2 id="2、安装PicGo"><a href="#2、安装PicGo" class="headerlink" title="2、安装PicGo"></a>2、安装PicGo</h2><blockquote>
-<p>下载网址：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p>
-</blockquote>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205221200.jpg"></p>
-<p>然后安装。<strong>将PicGo的数据加入环境变量中。</strong></p>
-<p>此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;双击Path-&gt;添加</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205222326.jpg"></p>
-<h2 id="3、图床环境配置"><a href="#3、图床环境配置" class="headerlink" title="3、图床环境配置"></a>3、图床环境配置</h2><p>打开安装好的图床,进行配置，即可！</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205224027.jpg"></p>
-<h2 id="4、Typora设置"><a href="#4、Typora设置" class="headerlink" title="4、Typora设置"></a>4、Typora设置</h2><p>设置自动上传到OSS阿里云，并且保存到我的笔记图片统一管理处（图片现在还是在本地）</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205224839-16387159733621.jpg"></p>
-<p>手动上传</p>
-<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205225207.jpg"></p>
-]]></content>
-      <categories>
-        <category>Typora</category>
-      </categories>
-      <tags>
-        <tag>oss</tag>
-        <tag>picGo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MongoDB快速入门，掌握这些刚刚好！</title>
-    <url>/2021/12/06/MongoDB%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%EF%BC%8C%E6%8E%8C%E6%8F%A1%E8%BF%99%E4%BA%9B%E5%88%9A%E5%88%9A%E5%A5%BD%EF%BC%81/</url>
+    <url>/2021/12/06/6ee0.html</url>
     <content><![CDATA[<h1 id="MongoDB快速入门，掌握这些刚刚好！"><a href="#MongoDB快速入门，掌握这些刚刚好！" class="headerlink" title="MongoDB快速入门，掌握这些刚刚好！"></a>MongoDB快速入门，掌握这些刚刚好！</h1><blockquote>
 <p>虽说现在关系型数据库还是主流，但是面对某些需求的时候，需要非关系型数据库来补充它，学习一个主流的NoSQL数据库还是很有必要的。MongoDB是一个功能丰富的NoSQL数据库，本文整理了它最常用的部分形成了这篇入门教程，希望对大家有所帮助。</p>
 </blockquote>
@@ -547,24 +507,48 @@ true
       </tags>
   </entry>
   <entry>
-    <title>随笔模板</title>
-    <url>/2021/12/06/essay-demo/</url>
-    <content><![CDATA[<h3 id="这是博主的随笔模板"><a href="#这是博主的随笔模板" class="headerlink" title="这是博主的随笔模板!"></a>这是博主的随笔模板!</h3><div class="ipage">
- <div class="ititle">节选自《你若安好便是晴天》- 前言</div>
-  <div class="izhengwen">
-    <p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。</p>
-  </div>
-</div>]]></content>
+    <title>Typora使用技巧——将图片自动上传到服务器上</title>
+    <url>/2021/12/05/1218.html</url>
+    <content><![CDATA[<h1 id="Typora使用技巧——将图片自动上传到服务器上"><a href="#Typora使用技巧——将图片自动上传到服务器上" class="headerlink" title="Typora使用技巧——将图片自动上传到服务器上"></a>Typora使用技巧——将图片自动上传到服务器上</h1><h1 id="何为图床？"><a href="#何为图床？" class="headerlink" title="何为图床？"></a>何为图床？</h1><blockquote>
+<p>说白了，就是类似百度网盘功能，放东西的，只不过这个东西都是图片！</p>
+</blockquote>
+<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205225519.jpg"></p>
+<h1 id="PicGo-又是啥？"><a href="#PicGo-又是啥？" class="headerlink" title="PicGo 又是啥？"></a>PicGo 又是啥？</h1><p>PicGo是一种图床工具！就是自动把本地图片转换成链接的一款工具，网络上有很多图床工具，就目前使用种类而言，PicGo 算得上一款比较优秀的图床工具。它是一款用 <code>Electron-vue</code> 开发的软件。</p>
+<p>可以支持微博，七牛云，腾讯云COS，又拍云，GitHub，阿里云OSS，SM.MS，imgur 等8种常用图床，功能强大，简单易用</p>
+<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205230208.jpg"></p>
+<h1 id="Typora建立PicGo图床"><a href="#Typora建立PicGo图床" class="headerlink" title="Typora建立PicGo图床"></a>Typora建立PicGo图床</h1><blockquote>
+<p>基于<code>Typora</code>+<code>Aliyun Oss对象存储</code>+<code>Picgo </code></p>
+</blockquote>
+<h2 id="1、阿里云图床"><a href="#1、阿里云图床" class="headerlink" title="1、阿里云图床"></a>1、阿里云图床</h2><p>首先在阿里云里搜索OSS，并开通服务。</p>
+<p><strong>创建Bucket</strong></p>
+<p>进入对象存储OSS，点击左侧栏Bucket 列表，创建Bucket 注意：读写权限选择<strong>公共读</strong>，不然PicGo无法上传图片。 </p>
+<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205220521.jpg"></p>
+<p>点击自己用户头像，创建<code>AccessKey</code>,保存相应的<code>AccessKey ID</code>和<code>Access Key Secret</code>信息。</p>
+<h2 id="2、安装PicGo"><a href="#2、安装PicGo" class="headerlink" title="2、安装PicGo"></a>2、安装PicGo</h2><blockquote>
+<p>下载网址：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p>
+</blockquote>
+<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205221200.jpg"></p>
+<p>然后安装。<strong>将PicGo的数据加入环境变量中。</strong></p>
+<p>此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;双击Path-&gt;添加</p>
+<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205222326.jpg"></p>
+<h2 id="3、图床环境配置"><a href="#3、图床环境配置" class="headerlink" title="3、图床环境配置"></a>3、图床环境配置</h2><p>打开安装好的图床,进行配置，即可！</p>
+<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205224027.jpg"></p>
+<h2 id="4、Typora设置"><a href="#4、Typora设置" class="headerlink" title="4、Typora设置"></a>4、Typora设置</h2><p>设置自动上传到OSS阿里云，并且保存到我的笔记图片统一管理处（图片现在还是在本地）</p>
+<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205224839-16387159733621.jpg"></p>
+<p>手动上传</p>
+<p><img src="https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/QQ%E6%88%AA%E5%9B%BE20211205225207.jpg"></p>
+]]></content>
       <categories>
-        <category>随笔</category>
+        <category>Typora</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
+        <tag>oss</tag>
+        <tag>picGo</tag>
       </tags>
   </entry>
   <entry>
     <title>hexo博客页面仿信纸作业纸样式修饰</title>
-    <url>/2021/12/06/hexo%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E4%BB%BF%E4%BF%A1%E7%BA%B8%E4%BD%9C%E4%B8%9A%E7%BA%B8%E6%A0%B7%E5%BC%8F%E4%BF%AE%E9%A5%B0/</url>
+    <url>/2021/12/06/e8f5.html</url>
     <content><![CDATA[<h1 id="hexo博客页面仿信纸作业纸样式修饰"><a href="#hexo博客页面仿信纸作业纸样式修饰" class="headerlink" title="hexo博客页面仿信纸作业纸样式修饰"></a>hexo博客页面仿信纸作业纸样式修饰</h1><blockquote>
 <p>“ 前言: 本文是给Hexo博客增加随笔页面，并对页面仿信纸作业纸样式修饰，基于Matery主题，其他主题亦可参考。”</p>
 </blockquote>
@@ -724,54 +708,140 @@ mathjax<span class="token operator">:</span> <span class="token boolean">true</s
       </tags>
   </entry>
   <entry>
-    <title>不推荐使用@Autowired进行Field注入的原因</title>
-    <url>/2021/12/07/%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8@Autowired%E8%BF%9B%E8%A1%8CField%E6%B3%A8%E5%85%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/</url>
-    <content><![CDATA[<h1 id="不推荐使用-Autowired进行Field注入的原因"><a href="#不推荐使用-Autowired进行Field注入的原因" class="headerlink" title="不推荐使用@Autowired进行Field注入的原因"></a>不推荐使用@Autowired进行Field注入的原因</h1><p>很久以前在用IDEA开发的时候就注意到过一个提示，在字段上使用Spring的依赖注入注解<code>@Autowired</code>后会出现如下警告</p>
-<blockquote>
-<p>Field injection is not recommended (字段注入是不被推荐的)</p>
-</blockquote>
-<p>但是使用<code>@Resource</code>却不会出现此提示!网上文章大部分都是介绍两者的区别，没有提到为什么，当时想了好久想出了可能的原因，不过时间过了这么久又有点忘记了，今天来总结一下</p>
-<h2 id="Spring常见的DI方式"><a href="#Spring常见的DI方式" class="headerlink" title="Spring常见的DI方式"></a>Spring常见的DI方式</h2><ul>
-<li><strong>构造器注入</strong>：利用构造方法的参数注入依赖</li>
-<li><strong>Setter注入</strong>：调用Setter的方法注入依赖</li>
-<li><strong>字段注入</strong>：在字段上使用@Autowired/Resource注解</li>
-</ul>
-<h3 id="Autowired-VS-Resource"><a href="#Autowired-VS-Resource" class="headerlink" title="@Autowired VS @Resource"></a>@Autowired VS @Resource</h3><p>事实上，他们的基本功能都是通过注解实现<strong>依赖注入</strong>，只不过<code>@Autowired</code>是<code>Spring</code>定义的，而<code>@Resource</code>是<code>JSR-250</code>定义的。大致功能基本相同，但是还有一些细节不同：</p>
-<ul>
-<li><strong>依赖识别方式</strong>：@Autowired默认是<strong>byType</strong>可以使用@Qualifier指定Name，@Resource<strong>默认ByName</strong>如果<strong>找不到则ByType</strong></li>
-<li><strong>适用对象</strong>：@Autowired可以对<strong>构造器、方法、参数、字段</strong>使用，@Resource只能对<strong>方法、字段</strong>使用</li>
-<li><strong>提供方</strong>：@Autowired是<strong>Spring</strong>提供的，@Resource是<strong>JSR-250</strong>提供的</li>
-</ul>
-<h2 id="各种DI方式的优缺点"><a href="#各种DI方式的优缺点" class="headerlink" title="各种DI方式的优缺点"></a>各种DI方式的优缺点</h2><p>参考Spring官方文档，建议了如下的使用场景：</p>
-<ul>
-<li><strong>构造器注入</strong>：<strong>强依赖性</strong>（即必须使用此依赖），<strong>不变性</strong>（各依赖不会经常变动）</li>
-<li><strong>Setter注入</strong>：<strong>可选</strong>（没有此依赖也可以工作），<strong>可变</strong>（依赖会经常变动）</li>
-<li><strong>Field注入</strong>：大多数情况下尽量<strong>少使用</strong>字段注入，一定要使用的话，**@Resource相对@Autowired<strong>对IoC容器的</strong>耦合更低**</li>
-</ul>
-<h2 id="Field注入的缺点"><a href="#Field注入的缺点" class="headerlink" title="Field注入的缺点"></a>Field注入的缺点</h2><ul>
-<li><strong>不能像构造器那样注入不可变的对象</strong></li>
-<li><strong>依赖对外部不可见</strong>，外界可以看到构造器和setter，但无法看到私有字段，自然无法了解所需依赖</li>
-<li>会导致<strong>组件与IoC容器紧耦合</strong>（这是最重要的原因，离开了IoC容器去使用组件，在注入依赖时就会十分困难）</li>
-<li>导致<strong>单元测试也必须使用IoC容器</strong>，原因同上</li>
-<li><strong>依赖过多时不够明显</strong>，比如我需要10个依赖，用构造器注入就会显得庞大，这时候应该考虑一下此组件是不是<strong>违反了单一职责原则</strong></li>
-</ul>
-<h3 id="为什么IDEA只对-Autowired警告"><a href="#为什么IDEA只对-Autowired警告" class="headerlink" title="为什么IDEA只对@Autowired警告"></a>为什么IDEA只对@Autowired警告</h3><p>Field注入虽然有很多缺点，但它的好处也不可忽略：那就是<strong>太方便了</strong>。使用构造器或者setter注入需要写更多业务无关的代码，十分麻烦，而字段注入大幅简化了它们。并且绝大多数情况下业务代码和框架就是强绑定的，完全松耦合只是一件理想上的事，牺牲了敏捷度去过度追求松耦合反而得不偿失。</p>
-<p>那么问题来了，为什么IDEA只对@Autowired警告，却对@Resource视而不见呢？</p>
-<p><strong>个人认为</strong>，就像我们前面提到过的：**@Autowired<strong>是</strong>Spring<strong>提供的，它是</strong>特定IoC提供的特定注解<strong>，这就导致了应用与框架的</strong>强绑定<strong>，一旦换用了其他的IoC框架，是</strong>不能够支持注入<strong>的。而</strong>@Resource<strong>是</strong>JSR-250<strong>提供的，它是</strong>Java标准**，我们使用的IoC容器应当去兼容它，这样即使更换容器，也可以正常工作。</p>
-]]></content>
+    <title>随笔模板</title>
+    <url>/2021/12/06/5d9.html</url>
+    <content><![CDATA[<h3 id="这是博主的随笔模板"><a href="#这是博主的随笔模板" class="headerlink" title="这是博主的随笔模板!"></a>这是博主的随笔模板!</h3><div class="ipage">
+ <div class="ititle">节选自《你若安好便是晴天》- 前言</div>
+  <div class="izhengwen">
+    <p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。</p>
+  </div>
+</div>]]></content>
       <categories>
-        <category>Spring</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>Autowired</tag>
-        <tag>Resource</tag>
-        <tag>DI</tag>
-        <tag>IDEA警告</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>了解这些软件设计思想，你的思维至少上升一个段位！</title>
+    <url>/2021/12/07/1025.html</url>
+    <content><![CDATA[<h1 id="了解这些软件设计思想，你的思维至少上升一个段位！"><a href="#了解这些软件设计思想，你的思维至少上升一个段位！" class="headerlink" title="了解这些软件设计思想，你的思维至少上升一个段位！"></a>了解这些软件设计思想，你的思维至少上升一个段位！</h1><h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素） 的书，该书首次提到了软件开发中设计模式的概念，四位作者合称 GOF（全拼 Gang of Four），简称四人帮！</p>
+<blockquote>
+<p>书中共说到 23 种设计模式，这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。</p>
+</blockquote>
+<p>当然，随着软件的快速发展，还出现另一类我们所熟知的设计模式：<strong>J2EE 设计模式</strong>。</p>
+<p>首先要跟大家说明的是，<strong>设计模式其实不是一项新技术</strong>，而是众多软件开发人员经过相当长的一段时间的试用和试错总结出来的一套软件设计开发实践方案，学习这些知识有助于经验不足的开发人员通过一种简单快捷的方式来学习软件设计。</p>
+<p>也不BB了，下面我们就一起来深入了解一下大神们总结的这套方法论！</p>
+<h3 id="二、方法论"><a href="#二、方法论" class="headerlink" title="二、方法论"></a>二、方法论</h3><h4 id="2-1、单一职责原则"><a href="#2-1、单一职责原则" class="headerlink" title="2.1、单一职责原则"></a>2.1、单一职责原则</h4><p>单一职责原则，顾名思义，一个类负责一个功能的处理，比如我们在代码中经常会涉及到调用第三方的接口，通常我们往往会将一个接口请求方法封装成一个<code>http</code>请求的工具类，这样其他的调用方能非常方便的进行调用。</p>
+<p>单一职责原则，主要的目的是将一个功能划分到合适的粒度，让这些各自执行单一职责的类，各司其职。</p>
+<p>还有我们常常说的mvc模式，将数据操作与业务逻辑处理进行分离，也是属于单一职责原则的一种。</p>
+<h4 id="2-2、开闭原则"><a href="#2-2、开闭原则" class="headerlink" title="2.2、开闭原则"></a>2.2、开闭原则</h4><p>开闭原则，指的是：<strong>对扩展开放，对修改关闭</strong>。这里的意思是在增加新功能的时候，<strong>能不改代码就尽量不要改，如果只增加代码就完成了新功能，那是最好的</strong>。</p>
+<p>下面我举个简单的例子，大家可能就懂了。</p>
+<p>在实际的项目开发过程中，尤其是与第三方公司进行接口对接的时候，例如 a 公司，他的接口协议要求采用<code>rsa</code>加密；b 公司，他的接口协议采用<code>aes</code>加密，c公司，他的接口协议要求采用<code>md5</code>就可以了…</p>
+<p>在一开始的时候，可能你没有想那么多，设想所有其他公司跟你对接的时候，全部采用<code>rsa</code>加密，那么当第二家公司来了时候，要求采用<code>aes</code>，这个时候，你必须得改代码才能支持这种功能，假如又来了其他公司呢？</p>
+<p>在这种情况下，我们可以采用面向接口编程的思想，定义一个抽象的方法，然后针对不同的加密算法，编写不同的实现类，当新来了一家公司要求采用不同的加密算法时，我们只需要扩展一个新的实现类，在逻辑处理层进行路由即可快速完成开发和对接！</p>
+<p>实现开闭原则的主要步骤就是将业务方法里面的逻辑进行抽象化，从而实现逻辑层面代码的解耦。</p>
+<h4 id="2-3、里氏代换原则"><a href="#2-3、里氏代换原则" class="headerlink" title="2.3、里氏代换原则"></a>2.3、里氏代换原则</h4><p>里氏替换原则，通俗的说就是：子类可以扩展父类的功能，但不能改变父类原有的功能。</p>
+<p>也就是说：<strong>子类继承父类时，除添加新的方法完成新增功能外，尽量不要重写父类的方法</strong>。</p>
+<p>当子类在重写父类的方法时，如果使用不当，很可能会改变父类方法中的逻辑语义，进而造成逻辑处理混乱。</p>
+<p>在实际的业务开发中，尤其是大家在使用类继承操作时，应当谨慎重新父类方法，方法定义的时候，名称也尽量不要发生重名。</p>
+<p>同时，应该注意类过多的继承，例如 A 类继承自 B 类，B 类 继承自 C 类，C 类继承 D 类，这种场景下，第一：逻辑很可能非常复杂，代码可读性可能很差，第二种可能会出现方法名或者属性名冲突。</p>
+<p>我曾经修改一个老项目 bug 的时候，就出现过这种情况，一个实体类出现三层关系的继承，当我把子类进行序列化成<code>json</code>的时候，突然报错，原因就是因为里面有个属性，在基类里面也定义了，但是类型却不一样，也就是说在这个子类里面有两个相同的属性，只是字段类型不同而已，从而导致这个序列化报错。</p>
+<p>因此，大家在使用类继承操作时，一定要谨慎处理，最好的情况下是一层关系继承，这样即使出现问题了，也好排查，范围可控；继承关系多了，反而代码变的非常复杂，每个方法逻辑都需要一一梳理清楚，你才敢去下手，这种情况下，反而为难了自己！</p>
+<h4 id="2-4、依赖倒转原则"><a href="#2-4、依赖倒转原则" class="headerlink" title="2.4、依赖倒转原则"></a>2.4、依赖倒转原则</h4><p>依赖倒转原则，简单的说就是<strong>面向接口编程，依赖于抽象而不依赖于具体</strong>，他是实现<strong>开闭原则</strong>的一个途径。</p>
+<p>依赖倒转原则主要有以下几点：</p>
+<ul>
+<li>高层的模块不应该依赖于低层的模块，这两者都应该依赖于其抽象</li>
+<li>抽象不应该依赖细节</li>
+<li>细节应该依赖抽象</li>
+</ul>
+<p>换句话说，就是将具体类里面的方法进行逻辑抽象化，提升到接口或者抽象类里面，由具体的实现类去实现具体的业务逻辑，抽象层不关注细节。</p>
+<p>也就是我们俗称的，不管遇到啥事情，先看大局，在看小点。</p>
+<p>举个例子，例如我们常常使用的<code>MVC</code>框架，在<code>Service</code>层通常会<strong>先编写接口类，然后在编写服务实现类，这就是典型的面向接口编程</strong>，这种方案有哪些好处呢？</p>
+<ul>
+<li>可以减少研发人员并行开发引起的风险</li>
+<li>可以显著提高代码的可读性和可维护性</li>
+<li>可以降低类间的耦合性</li>
+</ul>
+<p>当一个大项目开发的时候，试想一下，如果2个以上研发人员在编写同一个类的同一个方法，没有定义接口的情况下，随着时间的流逝，这个类大概率会非常混乱，同时，里面的方法估计阅读起来也很困难，一眼望去基本上不知道这个方法是干嘛的，尤其是重载方法很多的时候，尤其困难。</p>
+<p>当我们引入接口之后，将所有的核心方法全部抽象定义，当我们对其进行二次开发的时，也会能快速定位到以前的和谐方法，然后进行快速定位和维护。</p>
+<p>面向接口编程，还有一个很大的好处，就是可以降低类之间的耦合度。</p>
+<h4 id="2-5、接口隔离原则"><a href="#2-5、接口隔离原则" class="headerlink" title="2.5、接口隔离原则"></a>2.5、接口隔离原则</h4><p>接口隔离原则的意思是：<strong>尽量将一个接口拆的更细，使用多个隔离的接口，比使用单个接口要好</strong>。</p>
+<p>这个原则基本上是从大型软件架构出发、便于升级和维护的思想诞生出来的。</p>
+<p>比如，一个第三方保险服务系统里面，如果是小项目，你可以在一个接口里面定义<code>投保方法</code>、<code>取消方法</code>、 <code>退保方法</code>、 <code>理赔方法</code>、 <code>保单方法</code>这5种方法。</p>
+<p>当你只跟一家保险公司合作的时候，这套接口定义是没问题的，但是假如现在公司的业务发展的非常快，已经引入10几家保险公司了，你会发现这个接口基本上顶不住了，在此有两种方法可以解决这种技术难题：</p>
+<ul>
+<li>1、针对不同的保险公司，又重新定义一个接口，然后还是里面的5种方法</li>
+<li>2、针对不同的操作行为，比如<code>投保</code>，单独定义一套接口，然后针对不同的保险公司编写不同的实现类</li>
+</ul>
+<p>这两种其实本质都是将一个接口，拆成多个颗粒度更细的接口，然后从行为上，让各种的实现类更加独立，进而降低类之间的耦合度，开发起来层次清晰，有利于系统的稳定！</p>
+<h4 id="2-6、组合-聚合复用原则"><a href="#2-6、组合-聚合复用原则" class="headerlink" title="2.6、组合/聚合复用原则"></a>2.6、组合/聚合复用原则</h4><p>合成复用原则的意思就是：<strong>尽量使用组合/聚合的方式，而不是使用继承</strong>。</p>
+<p>所谓<strong>组合/聚合的方式</strong>，其实就是我们在<code>springMVC</code>里面使用的<code>ioc</code>依赖注入方式，</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">
+<span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AService</span> <span class="token punctuation">&#123;</span>
+
+ <span class="token comment">/**
+     * ioc依赖注入
+     */</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">BService</span> bService<span class="token punctuation">;</span>
+
+ <span class="token comment">//业务代码...</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>AService</code>类调用<code>BService</code>类，有两种方式可以实现，第一种就是通过继承方式，可以直接调用；第二种方式就是通过<code>ioc</code>依赖注入的方式，在类里面进行组合操作，然后进行调用。</p>
+<p><strong>很明显，第二种方式，我们使用的爱不释手</strong>！</p>
+<p>这种方式有个好处就是，代码层次清晰，编写优雅，用上之后容易上瘾，推荐使用！</p>
+<h4 id="2-7、迪米特法则"><a href="#2-7、迪米特法则" class="headerlink" title="2.7、迪米特法则"></a>2.7、迪米特法则</h4><p>迪米特法则，又称最少知道原则，意思就是说：<strong>一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立</strong>。</p>
+<p>类似单一原则的思想，例如我们编写实体类的时候，基本上就是属性名称，加<code>get/set</code>。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">&#123;</span>
+
+ <span class="token comment">/**
+     * 用户id
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> userId<span class="token punctuation">;</span>
+
+ <span class="token comment">/**
+     * 用户姓名
+     */</span>
+ <span class="token keyword">private</span> <span class="token class-name">String</span> userName<span class="token punctuation">;</span>
+
+
+ <span class="token keyword">public</span> <span class="token class-name">Long</span> <span class="token function">getUserId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userId<span class="token punctuation">;</span>
+ <span class="token punctuation">&#125;</span>
+
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserId</span><span class="token punctuation">(</span><span class="token class-name">Long</span> userId<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>userId <span class="token operator">=</span> userId<span class="token punctuation">;</span>
+ <span class="token punctuation">&#125;</span>
+
+ <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getUserName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userName<span class="token punctuation">;</span>
+ <span class="token punctuation">&#125;</span>
+
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserName</span><span class="token punctuation">(</span><span class="token class-name">String</span> userName<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>userName <span class="token operator">=</span> userName<span class="token punctuation">;</span>
+ <span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当一个实体里面出现跟自己没太大关系的代码时，例如数据运算逻辑处理，这个时候应当将这部分代码全部清理出去，交由业务处理层来出来。</p>
+<p>从实体类的定义来说，它主要的功能就是承担数据展示，当多个业务处理层在使用这个实体类的时候，如果你们嵌套了很多的数据运算逻辑，可能在返回的时候，客户端得到的实体类的属性值，并不是正确的结果！</p>
+<h3 id="三、小结"><a href="#三、小结" class="headerlink" title="三、小结"></a>三、小结</h3><p>上面一共介绍了 7 种设计原则，基本上都是大神们经过很多次血的教训，总结出来的一套方法论。</p>
+<p>这些设计原则，可以给同行在实际的软件设计过程中，提供一些思路，具体的应用，还需要结合实际的业务场景进一步思考，怎么让系统变的更加可靠，开发更佳迅速，代码阅读起来更佳轻松，关键在于灵活运用！</p>
+]]></content>
+      <categories>
+        <category>架构师</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
     <title>关于给Hexo文章分类页面按钮仿书本样式美化</title>
-    <url>/2021/12/07/%E5%85%B3%E4%BA%8E%E7%BB%99hexo%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E6%8C%89%E9%92%AE%E4%BB%BF%E4%B9%A6%E6%9C%AC%E6%A0%B7%E5%BC%8F%E7%BE%8E%E5%8C%96/</url>
+    <url>/2021/12/07/4bf7.html</url>
     <content><![CDATA[<h1 id="关于给Hexo文章分类页面按钮仿书本样式美化"><a href="#关于给Hexo文章分类页面按钮仿书本样式美化" class="headerlink" title="关于给Hexo文章分类页面按钮仿书本样式美化"></a>关于给Hexo文章分类页面按钮仿书本样式美化</h1><blockquote>
 <p>前言：最近成迷于美化Hexo博客样式，发现了这个超好看的样式，美化了一下，基于Matery主题设置的，其他主题原理也一样可参考。</p>
 </blockquote>
@@ -926,124 +996,54 @@ mathjax<span class="token operator">:</span> <span class="token boolean">true</s
       </tags>
   </entry>
   <entry>
-    <title>了解这些软件设计思想，你的思维至少上升一个段位！</title>
-    <url>/2021/12/07/%E4%BA%86%E8%A7%A3%E8%BF%99%E4%BA%9B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%EF%BC%8C%E4%BD%A0%E7%9A%84%E6%80%9D%E7%BB%B4%E8%87%B3%E5%B0%91%E4%B8%8A%E5%8D%87%E4%B8%80%E4%B8%AA%E6%AE%B5%E4%BD%8D%EF%BC%81/</url>
-    <content><![CDATA[<h1 id="了解这些软件设计思想，你的思维至少上升一个段位！"><a href="#了解这些软件设计思想，你的思维至少上升一个段位！" class="headerlink" title="了解这些软件设计思想，你的思维至少上升一个段位！"></a>了解这些软件设计思想，你的思维至少上升一个段位！</h1><h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素） 的书，该书首次提到了软件开发中设计模式的概念，四位作者合称 GOF（全拼 Gang of Four），简称四人帮！</p>
+    <title>不推荐使用@Autowired进行Field注入的原因</title>
+    <url>/2021/12/07/9bfd.html</url>
+    <content><![CDATA[<h1 id="不推荐使用-Autowired进行Field注入的原因"><a href="#不推荐使用-Autowired进行Field注入的原因" class="headerlink" title="不推荐使用@Autowired进行Field注入的原因"></a>不推荐使用@Autowired进行Field注入的原因</h1><p>很久以前在用IDEA开发的时候就注意到过一个提示，在字段上使用Spring的依赖注入注解<code>@Autowired</code>后会出现如下警告</p>
 <blockquote>
-<p>书中共说到 23 种设计模式，这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。</p>
+<p>Field injection is not recommended (字段注入是不被推荐的)</p>
 </blockquote>
-<p>当然，随着软件的快速发展，还出现另一类我们所熟知的设计模式：<strong>J2EE 设计模式</strong>。</p>
-<p>首先要跟大家说明的是，<strong>设计模式其实不是一项新技术</strong>，而是众多软件开发人员经过相当长的一段时间的试用和试错总结出来的一套软件设计开发实践方案，学习这些知识有助于经验不足的开发人员通过一种简单快捷的方式来学习软件设计。</p>
-<p>也不BB了，下面我们就一起来深入了解一下大神们总结的这套方法论！</p>
-<h3 id="二、方法论"><a href="#二、方法论" class="headerlink" title="二、方法论"></a>二、方法论</h3><h4 id="2-1、单一职责原则"><a href="#2-1、单一职责原则" class="headerlink" title="2.1、单一职责原则"></a>2.1、单一职责原则</h4><p>单一职责原则，顾名思义，一个类负责一个功能的处理，比如我们在代码中经常会涉及到调用第三方的接口，通常我们往往会将一个接口请求方法封装成一个<code>http</code>请求的工具类，这样其他的调用方能非常方便的进行调用。</p>
-<p>单一职责原则，主要的目的是将一个功能划分到合适的粒度，让这些各自执行单一职责的类，各司其职。</p>
-<p>还有我们常常说的mvc模式，将数据操作与业务逻辑处理进行分离，也是属于单一职责原则的一种。</p>
-<h4 id="2-2、开闭原则"><a href="#2-2、开闭原则" class="headerlink" title="2.2、开闭原则"></a>2.2、开闭原则</h4><p>开闭原则，指的是：<strong>对扩展开放，对修改关闭</strong>。这里的意思是在增加新功能的时候，<strong>能不改代码就尽量不要改，如果只增加代码就完成了新功能，那是最好的</strong>。</p>
-<p>下面我举个简单的例子，大家可能就懂了。</p>
-<p>在实际的项目开发过程中，尤其是与第三方公司进行接口对接的时候，例如 a 公司，他的接口协议要求采用<code>rsa</code>加密；b 公司，他的接口协议采用<code>aes</code>加密，c公司，他的接口协议要求采用<code>md5</code>就可以了…</p>
-<p>在一开始的时候，可能你没有想那么多，设想所有其他公司跟你对接的时候，全部采用<code>rsa</code>加密，那么当第二家公司来了时候，要求采用<code>aes</code>，这个时候，你必须得改代码才能支持这种功能，假如又来了其他公司呢？</p>
-<p>在这种情况下，我们可以采用面向接口编程的思想，定义一个抽象的方法，然后针对不同的加密算法，编写不同的实现类，当新来了一家公司要求采用不同的加密算法时，我们只需要扩展一个新的实现类，在逻辑处理层进行路由即可快速完成开发和对接！</p>
-<p>实现开闭原则的主要步骤就是将业务方法里面的逻辑进行抽象化，从而实现逻辑层面代码的解耦。</p>
-<h4 id="2-3、里氏代换原则"><a href="#2-3、里氏代换原则" class="headerlink" title="2.3、里氏代换原则"></a>2.3、里氏代换原则</h4><p>里氏替换原则，通俗的说就是：子类可以扩展父类的功能，但不能改变父类原有的功能。</p>
-<p>也就是说：<strong>子类继承父类时，除添加新的方法完成新增功能外，尽量不要重写父类的方法</strong>。</p>
-<p>当子类在重写父类的方法时，如果使用不当，很可能会改变父类方法中的逻辑语义，进而造成逻辑处理混乱。</p>
-<p>在实际的业务开发中，尤其是大家在使用类继承操作时，应当谨慎重新父类方法，方法定义的时候，名称也尽量不要发生重名。</p>
-<p>同时，应该注意类过多的继承，例如 A 类继承自 B 类，B 类 继承自 C 类，C 类继承 D 类，这种场景下，第一：逻辑很可能非常复杂，代码可读性可能很差，第二种可能会出现方法名或者属性名冲突。</p>
-<p>我曾经修改一个老项目 bug 的时候，就出现过这种情况，一个实体类出现三层关系的继承，当我把子类进行序列化成<code>json</code>的时候，突然报错，原因就是因为里面有个属性，在基类里面也定义了，但是类型却不一样，也就是说在这个子类里面有两个相同的属性，只是字段类型不同而已，从而导致这个序列化报错。</p>
-<p>因此，大家在使用类继承操作时，一定要谨慎处理，最好的情况下是一层关系继承，这样即使出现问题了，也好排查，范围可控；继承关系多了，反而代码变的非常复杂，每个方法逻辑都需要一一梳理清楚，你才敢去下手，这种情况下，反而为难了自己！</p>
-<h4 id="2-4、依赖倒转原则"><a href="#2-4、依赖倒转原则" class="headerlink" title="2.4、依赖倒转原则"></a>2.4、依赖倒转原则</h4><p>依赖倒转原则，简单的说就是<strong>面向接口编程，依赖于抽象而不依赖于具体</strong>，他是实现<strong>开闭原则</strong>的一个途径。</p>
-<p>依赖倒转原则主要有以下几点：</p>
-<ul>
-<li>高层的模块不应该依赖于低层的模块，这两者都应该依赖于其抽象</li>
-<li>抽象不应该依赖细节</li>
-<li>细节应该依赖抽象</li>
+<p>但是使用<code>@Resource</code>却不会出现此提示!网上文章大部分都是介绍两者的区别，没有提到为什么，当时想了好久想出了可能的原因，不过时间过了这么久又有点忘记了，今天来总结一下</p>
+<h2 id="Spring常见的DI方式"><a href="#Spring常见的DI方式" class="headerlink" title="Spring常见的DI方式"></a>Spring常见的DI方式</h2><ul>
+<li><strong>构造器注入</strong>：利用构造方法的参数注入依赖</li>
+<li><strong>Setter注入</strong>：调用Setter的方法注入依赖</li>
+<li><strong>字段注入</strong>：在字段上使用@Autowired/Resource注解</li>
 </ul>
-<p>换句话说，就是将具体类里面的方法进行逻辑抽象化，提升到接口或者抽象类里面，由具体的实现类去实现具体的业务逻辑，抽象层不关注细节。</p>
-<p>也就是我们俗称的，不管遇到啥事情，先看大局，在看小点。</p>
-<p>举个例子，例如我们常常使用的<code>MVC</code>框架，在<code>Service</code>层通常会<strong>先编写接口类，然后在编写服务实现类，这就是典型的面向接口编程</strong>，这种方案有哪些好处呢？</p>
+<h3 id="Autowired-VS-Resource"><a href="#Autowired-VS-Resource" class="headerlink" title="@Autowired VS @Resource"></a>@Autowired VS @Resource</h3><p>事实上，他们的基本功能都是通过注解实现<strong>依赖注入</strong>，只不过<code>@Autowired</code>是<code>Spring</code>定义的，而<code>@Resource</code>是<code>JSR-250</code>定义的。大致功能基本相同，但是还有一些细节不同：</p>
 <ul>
-<li>可以减少研发人员并行开发引起的风险</li>
-<li>可以显著提高代码的可读性和可维护性</li>
-<li>可以降低类间的耦合性</li>
+<li><strong>依赖识别方式</strong>：@Autowired默认是<strong>byType</strong>可以使用@Qualifier指定Name，@Resource<strong>默认ByName</strong>如果<strong>找不到则ByType</strong></li>
+<li><strong>适用对象</strong>：@Autowired可以对<strong>构造器、方法、参数、字段</strong>使用，@Resource只能对<strong>方法、字段</strong>使用</li>
+<li><strong>提供方</strong>：@Autowired是<strong>Spring</strong>提供的，@Resource是<strong>JSR-250</strong>提供的</li>
 </ul>
-<p>当一个大项目开发的时候，试想一下，如果2个以上研发人员在编写同一个类的同一个方法，没有定义接口的情况下，随着时间的流逝，这个类大概率会非常混乱，同时，里面的方法估计阅读起来也很困难，一眼望去基本上不知道这个方法是干嘛的，尤其是重载方法很多的时候，尤其困难。</p>
-<p>当我们引入接口之后，将所有的核心方法全部抽象定义，当我们对其进行二次开发的时，也会能快速定位到以前的和谐方法，然后进行快速定位和维护。</p>
-<p>面向接口编程，还有一个很大的好处，就是可以降低类之间的耦合度。</p>
-<h4 id="2-5、接口隔离原则"><a href="#2-5、接口隔离原则" class="headerlink" title="2.5、接口隔离原则"></a>2.5、接口隔离原则</h4><p>接口隔离原则的意思是：<strong>尽量将一个接口拆的更细，使用多个隔离的接口，比使用单个接口要好</strong>。</p>
-<p>这个原则基本上是从大型软件架构出发、便于升级和维护的思想诞生出来的。</p>
-<p>比如，一个第三方保险服务系统里面，如果是小项目，你可以在一个接口里面定义<code>投保方法</code>、<code>取消方法</code>、 <code>退保方法</code>、 <code>理赔方法</code>、 <code>保单方法</code>这5种方法。</p>
-<p>当你只跟一家保险公司合作的时候，这套接口定义是没问题的，但是假如现在公司的业务发展的非常快，已经引入10几家保险公司了，你会发现这个接口基本上顶不住了，在此有两种方法可以解决这种技术难题：</p>
+<h2 id="各种DI方式的优缺点"><a href="#各种DI方式的优缺点" class="headerlink" title="各种DI方式的优缺点"></a>各种DI方式的优缺点</h2><p>参考Spring官方文档，建议了如下的使用场景：</p>
 <ul>
-<li>1、针对不同的保险公司，又重新定义一个接口，然后还是里面的5种方法</li>
-<li>2、针对不同的操作行为，比如<code>投保</code>，单独定义一套接口，然后针对不同的保险公司编写不同的实现类</li>
+<li><strong>构造器注入</strong>：<strong>强依赖性</strong>（即必须使用此依赖），<strong>不变性</strong>（各依赖不会经常变动）</li>
+<li><strong>Setter注入</strong>：<strong>可选</strong>（没有此依赖也可以工作），<strong>可变</strong>（依赖会经常变动）</li>
+<li><strong>Field注入</strong>：大多数情况下尽量<strong>少使用</strong>字段注入，一定要使用的话，**@Resource相对@Autowired<strong>对IoC容器的</strong>耦合更低**</li>
 </ul>
-<p>这两种其实本质都是将一个接口，拆成多个颗粒度更细的接口，然后从行为上，让各种的实现类更加独立，进而降低类之间的耦合度，开发起来层次清晰，有利于系统的稳定！</p>
-<h4 id="2-6、组合-聚合复用原则"><a href="#2-6、组合-聚合复用原则" class="headerlink" title="2.6、组合/聚合复用原则"></a>2.6、组合/聚合复用原则</h4><p>合成复用原则的意思就是：<strong>尽量使用组合/聚合的方式，而不是使用继承</strong>。</p>
-<p>所谓<strong>组合/聚合的方式</strong>，其实就是我们在<code>springMVC</code>里面使用的<code>ioc</code>依赖注入方式，</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">
-<span class="token annotation punctuation">@Component</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AService</span> <span class="token punctuation">&#123;</span>
-
- <span class="token comment">/**
-     * ioc依赖注入
-     */</span>
-    <span class="token annotation punctuation">@Autowired</span>
-    <span class="token keyword">private</span> <span class="token class-name">BService</span> bService<span class="token punctuation">;</span>
-
- <span class="token comment">//业务代码...</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><code>AService</code>类调用<code>BService</code>类，有两种方式可以实现，第一种就是通过继承方式，可以直接调用；第二种方式就是通过<code>ioc</code>依赖注入的方式，在类里面进行组合操作，然后进行调用。</p>
-<p><strong>很明显，第二种方式，我们使用的爱不释手</strong>！</p>
-<p>这种方式有个好处就是，代码层次清晰，编写优雅，用上之后容易上瘾，推荐使用！</p>
-<h4 id="2-7、迪米特法则"><a href="#2-7、迪米特法则" class="headerlink" title="2.7、迪米特法则"></a>2.7、迪米特法则</h4><p>迪米特法则，又称最少知道原则，意思就是说：<strong>一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立</strong>。</p>
-<p>类似单一原则的思想，例如我们编写实体类的时候，基本上就是属性名称，加<code>get/set</code>。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">&#123;</span>
-
- <span class="token comment">/**
-     * 用户id
-     */</span>
-    <span class="token keyword">private</span> <span class="token class-name">Long</span> userId<span class="token punctuation">;</span>
-
- <span class="token comment">/**
-     * 用户姓名
-     */</span>
- <span class="token keyword">private</span> <span class="token class-name">String</span> userName<span class="token punctuation">;</span>
-
-
- <span class="token keyword">public</span> <span class="token class-name">Long</span> <span class="token function">getUserId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userId<span class="token punctuation">;</span>
- <span class="token punctuation">&#125;</span>
-
- <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserId</span><span class="token punctuation">(</span><span class="token class-name">Long</span> userId<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token keyword">this</span><span class="token punctuation">.</span>userId <span class="token operator">=</span> userId<span class="token punctuation">;</span>
- <span class="token punctuation">&#125;</span>
-
- <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getUserName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userName<span class="token punctuation">;</span>
- <span class="token punctuation">&#125;</span>
-
- <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserName</span><span class="token punctuation">(</span><span class="token class-name">String</span> userName<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token keyword">this</span><span class="token punctuation">.</span>userName <span class="token operator">=</span> userName<span class="token punctuation">;</span>
- <span class="token punctuation">&#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>当一个实体里面出现跟自己没太大关系的代码时，例如数据运算逻辑处理，这个时候应当将这部分代码全部清理出去，交由业务处理层来出来。</p>
-<p>从实体类的定义来说，它主要的功能就是承担数据展示，当多个业务处理层在使用这个实体类的时候，如果你们嵌套了很多的数据运算逻辑，可能在返回的时候，客户端得到的实体类的属性值，并不是正确的结果！</p>
-<h3 id="三、小结"><a href="#三、小结" class="headerlink" title="三、小结"></a>三、小结</h3><p>上面一共介绍了 7 种设计原则，基本上都是大神们经过很多次血的教训，总结出来的一套方法论。</p>
-<p>这些设计原则，可以给同行在实际的软件设计过程中，提供一些思路，具体的应用，还需要结合实际的业务场景进一步思考，怎么让系统变的更加可靠，开发更佳迅速，代码阅读起来更佳轻松，关键在于灵活运用！</p>
+<h2 id="Field注入的缺点"><a href="#Field注入的缺点" class="headerlink" title="Field注入的缺点"></a>Field注入的缺点</h2><ul>
+<li><strong>不能像构造器那样注入不可变的对象</strong></li>
+<li><strong>依赖对外部不可见</strong>，外界可以看到构造器和setter，但无法看到私有字段，自然无法了解所需依赖</li>
+<li>会导致<strong>组件与IoC容器紧耦合</strong>（这是最重要的原因，离开了IoC容器去使用组件，在注入依赖时就会十分困难）</li>
+<li>导致<strong>单元测试也必须使用IoC容器</strong>，原因同上</li>
+<li><strong>依赖过多时不够明显</strong>，比如我需要10个依赖，用构造器注入就会显得庞大，这时候应该考虑一下此组件是不是<strong>违反了单一职责原则</strong></li>
+</ul>
+<h3 id="为什么IDEA只对-Autowired警告"><a href="#为什么IDEA只对-Autowired警告" class="headerlink" title="为什么IDEA只对@Autowired警告"></a>为什么IDEA只对@Autowired警告</h3><p>Field注入虽然有很多缺点，但它的好处也不可忽略：那就是<strong>太方便了</strong>。使用构造器或者setter注入需要写更多业务无关的代码，十分麻烦，而字段注入大幅简化了它们。并且绝大多数情况下业务代码和框架就是强绑定的，完全松耦合只是一件理想上的事，牺牲了敏捷度去过度追求松耦合反而得不偿失。</p>
+<p>那么问题来了，为什么IDEA只对@Autowired警告，却对@Resource视而不见呢？</p>
+<p><strong>个人认为</strong>，就像我们前面提到过的：**@Autowired<strong>是</strong>Spring<strong>提供的，它是</strong>特定IoC提供的特定注解<strong>，这就导致了应用与框架的</strong>强绑定<strong>，一旦换用了其他的IoC框架，是</strong>不能够支持注入<strong>的。而</strong>@Resource<strong>是</strong>JSR-250<strong>提供的，它是</strong>Java标准**，我们使用的IoC容器应当去兼容它，这样即使更换容器，也可以正常工作。</p>
 ]]></content>
       <categories>
-        <category>架构师</category>
+        <category>Spring</category>
       </categories>
       <tags>
-        <tag>设计模式</tag>
-        <tag>Markdown</tag>
+        <tag>Autowired</tag>
+        <tag>Resource</tag>
+        <tag>DI</tag>
+        <tag>IDEA警告</tag>
       </tags>
   </entry>
   <entry>
     <title>看完这篇还不了解Nginx，那我就哭了！</title>
-    <url>/2021/12/07/%E7%9C%8B%E5%AE%8C%E8%BF%99%E7%AF%87%E8%BF%98%E4%B8%8D%E4%BA%86%E8%A7%A3Nginx%EF%BC%8C%E9%82%A3%E6%88%91%E5%B0%B1%E5%93%AD%E4%BA%86%EF%BC%81/</url>
+    <url>/2021/12/07/551c.html</url>
     <content><![CDATA[<h1 id="看完这篇还不了解Nginx，那我就哭了！"><a href="#看完这篇还不了解Nginx，那我就哭了！" class="headerlink" title="看完这篇还不了解Nginx，那我就哭了！"></a>看完这篇还不了解Nginx，那我就哭了！</h1><blockquote>
 <p>转载自：<a href="https://www.cnblogs.com/wcwnina/p/8728391.html">https://www.cnblogs.com/wcwnina/p/8728391.html</a></p>
 </blockquote>
@@ -1120,7 +1120,7 @@ mathjax<span class="token operator">:</span> <span class="token boolean">true</s
   </entry>
   <entry>
     <title>解放双手！MyBatis官方代码生成工具给力！</title>
-    <url>/2021/12/05/%E8%A7%A3%E6%94%BE%E5%8F%8C%E6%89%8B%EF%BC%81MyBatis%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7%E7%BB%99%E5%8A%9B%EF%BC%81/</url>
+    <url>/2021/12/05/81b8.html</url>
     <content><![CDATA[<h1 id="解放双手！MyBatis官方代码生成工具给力！"><a href="#解放双手！MyBatis官方代码生成工具给力！" class="headerlink" title="解放双手！MyBatis官方代码生成工具给力！"></a>解放双手！MyBatis官方代码生成工具给力！</h1><blockquote>
 <p>在我们使用MyBatis的过程中，如果所有实体类和单表CRUD代码都需要手写，那将会是一件相当麻烦的事情。MyBatis官方代码生成器MyBatis Generator可以帮助我们解决这个问题，在我的开源项目mall中也是使用的这个代码生成器，用习惯了也挺不错的。本文将介绍MyBatis Generator的使用方法及使用技巧，希望对大家有所帮助！</p>
 </blockquote>
@@ -1766,7 +1766,7 @@ jasypt:
   </entry>
   <entry>
     <title>干掉mapper.xml！MyBatis新特性动态SQL真香！</title>
-    <url>/2021/12/07/%E5%B9%B2%E6%8E%89mapper.xml%EF%BC%81MyBatis%E6%96%B0%E7%89%B9%E6%80%A7%E5%8A%A8%E6%80%81SQL%E7%9C%9F%E9%A6%99%EF%BC%81/</url>
+    <url>/2021/12/07/aa97.html</url>
     <content><![CDATA[<h1 id="干掉mapper-xml！MyBatis新特性动态SQL真香！"><a href="#干掉mapper-xml！MyBatis新特性动态SQL真香！" class="headerlink" title="干掉mapper.xml！MyBatis新特性动态SQL真香！"></a>干掉mapper.xml！MyBatis新特性动态SQL真香！</h1><blockquote>
 <p>当我们使用MyBatis的时候，需要在mapper.xml中书写大量的SQL语句。当我们使用MyBatis Generator（MBG）作为代码生成器时，也会生成大量的mapper.xml文件。其实从MBG 1.3.6版本以后，MyBatis官方已经推荐使用Dynamic SQL，使用这一新特性基本就不用写mapper.xml文件了，使用起来非常方便，推荐给大家！</p>
 </blockquote>
