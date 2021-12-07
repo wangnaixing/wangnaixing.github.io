@@ -58,13 +58,22 @@
     }
 }
 
-body {
+/*body {
     background-color: #eaeaea;
     margin: 0;
     color: #34495e;
     overflow-x: hidden;
     overflow-y: auto;
+}*/
+
+body {
+    /* background-color: #eaeaea; */
+    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("https://wnxbucket-001.oss-cn-guangzhou.aliyuncs.com/myblog/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0px 0px;
+    background-attachment: fixed;
+    margin: 0;
+    color: #7F95D1;
 }
+
 
 h1 {
     margin: 48px 0 22px -5px;
@@ -266,7 +275,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #7371BC 0%, #284D95 100%);
 }
 
 .text-color {
@@ -575,10 +584,10 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/*.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+}*/
 
 .bg-cover:before,
 .bg-cover:after {
@@ -2167,4 +2176,11 @@ p.search-result-summary{
     height: 50px;
     padding: 0;
     margin: 0;
+}
+
+/*解决链接显示*/
+.reprint__type{
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
 }
